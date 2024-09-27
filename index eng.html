@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TCM1989</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img\tcm_logo1.gif">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+
+
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+    background-image: url('/w3images/parallax1.jpg');
+    min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+    }
+    </style>
+  
+    <!-- แทบบาร์ -->
+    <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+    }
+    
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    </script>
+ 
+  
+</head>
+<body>
+<!-- ส่วนหัว -->
+<!-- Improved Navigation Bar -->
+
+    <div class="w3-top" style=" background-color: rgba(255, 255, 255, 0.46);">
+        <div class="w3-bar w3-padding-16" id="myNavbar">
+            <!-- Hamburger Icon for Small Screens -->
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <!-- Logo Section -->
+            <a class="w3-bar-item w3-button w3-padding-0" style="height: 70px;" href="index eng.html">
+                <img src="img/tcm_logo.png" alt="Logo" style="height:100%; max-height: 60px;">
+            </a>
+            <!-- Menu Items -->
+            <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">About Us</a>
+            <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Products and Services</a>
+            <a href="index eng.html#item-1-3" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Events and News</a>
+            <a href="index eng.html#item-1-4" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Contact Us</a>
+            <!-- Language Icons -->
+                <div class="w3-right">
+                    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                        <img src="img/icon/th_th.gif" alt="ไทย" style="height: 25px;">
+                    </a>
+                    <a href="index eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                        <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
+                    </a>
+                </div>
+                <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                    <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
+                    <a href="index eng.html#item-1-3" class="w3-bar-item w3-button" onclick="toggleFunction()">Events and News</a>
+                    <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
+                    <a href="index.html" class="w3-bar-item w3-button">
+                        <img src="img/icon/th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                    </a>
+                    <a href="index eng.html" class="w3-bar-item w3-button" >
+                        <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
+                    </a>
+                </div>
+            
+        </div>
+    </div>
+    <div id="carouselExampleInterval000" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="img/2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+            <img src="img/1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="7000">
+            <img src="img/3.jpg" class="d-block w-100" alt="...">
+        </div>
+        </div>
+        
+    </div>
+
+<!-- ส่วนเนื้อหา -->
+
+    <div class="row g-4  row-cols-lg-4">
+        <style>
+                            .icon-img {
+                    height: 50px; /* Adjust height as needed */
+                    margin-bottom: 10px;
+                }
+
+                .feature-title {
+                    font-size: 1.25rem;
+                    margin-bottom: 5px;
+                }
+
+                .feature-description {
+                    font-size: 1rem;
+                    margin-bottom: 15px;
+                }
+
+                .row-cols-lg-4 .col {
+                    text-align: center;
+                    padding: 15px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    background-color: #f9f9f9;
+                    transition: background-color 0.3s, box-shadow 0.3s;
+                }
+
+                .row-cols-lg-4 .col:hover {
+                    background-color: #e9ecef;
+                    box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+                }
+
+        </style>
+        <div class="col">
+            <a >
+                <img src="img/icon/employees.png" alt="Icon of employees" class="icon-img">
+            </a>
+            <h4 class="feature-title">TEAM</h4>
+            <p class="feature-description">We have a team that specializes in designing and building machines.</p>
+            <p class="feature-description">เรามีทีมที่เชี่ยวชาญด้านการออกแบบและสร้างเครื่องจักร</p>
+        </div>
+
+        <div class="col">
+            <a >
+                <img src="img/icon/machinery.png" alt="Icon of machinery" class="icon-img">
+            </a>
+            <h4 class="feature-title">MACHINERY</h4>
+            <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>
+            <p class="feature-description">เครื่องจักรของเราสร้างขึ้นเพื่อให้ตรงตามมาตรฐานคุณภาพที่เป็นที่ยอมรับ พร้อมการรับประกันหนึ่งปีเต็มซึ่งรวมถึงอะไหล่และบริการค่าแรงฟรี</p>
+        </div>
+
+        <div class="col">
+            <a >
+                <img src="img/icon/design-thinking.png" alt="Icon of design-thinking" class="icon-img">
+            </a>
+            <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
+            <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere. Responding to the specific needs of customers exactly.</p>
+            <p class="feature-description">เรามุ่งเน้นการออกแบบ สร้างสรรค์ และพัฒนาเครื่องจักรเฉพาะทางที่ไม่สามารถหาซื้อได้ทั่วไป ตอบสนองความต้องการเฉพาะของลูกค้าอย่างตรงจุด</p>
+        </div>
+
+        <div class="col">
+            <a >
+                <img src="img/icon/service.png" alt="Icon of service" class="icon-img">
+            </a>
+            <h4 class="feature-title">QUALITY ASSURANCE</h4>
+            <p class="feature-description">We operate under a quality management system that covers every step, from designing, producing, and assembling machines to product delivery, according to quality standards ISO 9001:2015.</p>
+            <p class="feature-description">เราดำเนินงานภายใต้ระบบการจัดการคุณภาพที่ครอบคลุมทุกขั้นตอน ตั้งแต่การออกแบบ ผลิต และประกอบเครื่องจักร จนถึงการส่งมอบผลิตภัณฑ์ ตามมาตรฐานคุณภาพ ISO 9001:2015</p>
+        </div>
+    </div>
+
+<!-- เกี่ยวกับเรา -->
+
+        <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
+            
+            <div class="text-center mb-4">
+                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                    About Us
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img\TCM2.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\TCM6.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img\TCM7.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/A&A/a.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="col-md-6">
+                    <h6 class="mb-4">
+                        Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 as an industrial solutions provider specializing in the design, research and development, creation, and installation of prototype machinery for the manufacturing industry. Our services include raw material conveyor systems, automation systems, electrical and PLC control systems, factory structures and cranes, automated robotic arms, and the upgrading of existing machinery using modern technology.
+                        Our company has a skilled team of over 40 engineers and technicians with extensive experience. We continuously develop and improve our manufacturing processes to meet customer needs.
+                    </h6>
+                    <h6 class="mb-4">
+                        Thai Central Mechanics is a leader in material handling systems, production machinery, and automation systems. We offer consulting services in research, development, design, and construction of machinery for all types of manufacturing industries. With a team of experienced and highly skilled professionals, we currently design and build industrial machinery such as:
+                        <ul>
+                            <li>Design and Implementation of Turnkey Automation Systems: This includes plant layout design, production process sequencing, material handling systems, machinery in production lines, quality control systems, and packaging processes.</li>
+                            <li>Installation and Supply of Robotic Systems: This includes designing and creating components for robotic arms (Grippers), programming robot operations, and designing and building support systems for robotic operations.</li>
+                            <li>Electrical Systems for Factories: This includes designing and installing electrical systems for machinery, including PLC programming and controllers.</li>
+                            <li>Design and Construction of Production Line Machinery: This covers all types of industries and manufacturing processes.</li>
+                            <li>Upgrading Machinery and Production Lines: Enhancing machinery and production lines to improve efficiency and effectiveness.</li>
+                            <li>Research and Development of Production Processes: Enhancing production efficiency, improving quality, and reducing waste.</li>
+                        </ul>
+                    </h6>
+                    <h6>
+                        Thai Central Mechanics Co., Ltd. has received various awards from activities and collaborations with different sectors, including government agencies, private organizations, and educational institutions. These awards are a testament to our commitment to developing products that meet high standards and quality, as well as our excellence in service recognized by leading customers.
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+<!-- สินค้าและบริการ -->
+ 
+        <div class=" text-center py-4" style="background-color: rgb(52, 52, 52);">
+        <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-2" >
+            Products and Services
+        </a>
+        </div>
+        <div class="" style="background-color: rgb(52, 52, 52);">
+            <div class="row row-cols-1 row-cols-md-3 g-4 p-3">
+                
+                <div class="col">
+                    <div class="border bg-light p-3 rounded">
+                        <a style="font-size: 16px;" href="automation eng.html#item-a-1">
+                            <img src="img/eng/tcm_eng1.jpg" class="img-fluid img-thumbnail" alt="Image 1">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="border bg-light p-3 rounded">
+                        <a style="font-size: 16px;" href="design eng.html#item-a-1">
+                        <img src="img/eng/tcm_eng2.jpg" class="img-fluid img-thumbnail" alt="Image 2">
+                        </a>    
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="border bg-light p-2 rounded">
+                        <a style="font-size: 16px;" href="conveyor eng.html#item-a-1">
+                        <img src="img/eng/tcm_eng3.jpg" class="img-fluid img-thumbnail" alt="Image 3">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="border bg-light p-2 rounded">
+                        <a style="font-size: 16px;" href="custom-made eng.html#item-a-1">
+                        <img src="img/eng/tcm_eng4.jpg" class="img-fluid img-thumbnail" alt="Image 4">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="border bg-light p-2 rounded">
+                        <a style="font-size: 16px;" href="electrical eng.html#item-a-1">
+                        <img src="img/eng/tcm_eng5.jpg" class="img-fluid img-thumbnail" alt="Image 5">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="border bg-light p-2 rounded">
+                        <a style="font-size: 16px;" href="standard eng.html#item-a-1">
+                        <img src="img/eng/tcm_eng6.jpg" class="img-fluid img-thumbnail" alt="Image 6">
+                        </a>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+<!-- กิจกรรม ข่าวสาร --> 
+
+        <div class=" text-center py-5" style="background-color: rgb(52, 52, 52);">
+            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-3">
+                Events and News
+            </a>
+        </div>
+
+        <div style="background-color: rgb(52, 52, 52); padding: 10px;">
+            <style>
+                h1, h2 {
+                    color: #fff;
+                    text-align: center; /* จัดกลางหัวข้อ */
+                }
+                #output {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    margin-top: 20px; /* เพิ่มระยะห่างจากหัวข้อ */
+                }
+                .activity {
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 10px;
+                    background-color: #f9f9f9;
+                    color: #333; /* เปลี่ยนสีข้อความภายใน */
+                }
+                .image-container img {
+                    max-width: 100px; /* ปรับขนาดตามที่ต้องการ */
+                    height: 100px; /* คงสัดส่วนภาพ */
+                    margin-right: 10px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบ smooth */
+                }
+                #large-image {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 90%;
+                    max-height: 90%;
+                    display: none;
+                    z-index: 1000;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                #large-image img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+                #overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    display: none;
+                    z-index: 999;
+                }
+        
+                /* Styles for the pagination buttons */
+                #pagination {
+                    text-align: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+                    margin-top: 20px;
+                }
+                #pagination button {
+                    padding: 10px 20px;
+                    background-color: #5cb85c;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    margin: 0 5px; /* ระยะห่างระหว่างปุ่ม */
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                #pagination button:hover {
+                    background-color: #4cae4c;
+                }
+            </style>
+        
+            <div id="output"></div>
+            <div id="pagination"></div>
+        
+            <!-- Large Image Display -->
+            <div id="overlay"></div>
+            <div id="large-image">
+                <img id="largeImageElement" src="" alt="Large Image">
+            </div>
+        
+            <script>
+                let activities = JSON.parse(localStorage.getItem('activities')) || [];
+                let currentPage = 1;
+                const itemsPerPage = 3;
+        
+                function displayActivities() {
+                    const output = document.getElementById('output');
+                    output.innerHTML = '';
+        
+                    const start = (currentPage - 1) * itemsPerPage;
+                    const end = start + itemsPerPage;
+                    const paginatedActivities = activities.slice(start, end);
+        
+                    paginatedActivities.forEach(activity => {
+                        const activityOutput = `
+                            <div class="activity">
+                                <p><strong>เรื่อง:</strong> ${activity.name}</p>
+                                <p><strong>วันที่:</strong> ${activity.date}</p>
+                                <p><strong>สถานที่:</strong> ${activity.location}</p>
+                                <p><strong>รายละเอียด:</strong> ${activity.description}</p>
+                                <p><strong>รูปภาพ:</strong></p>
+                                <div class="image-container">${activity.images}</div>
+                            </div>
+                        `;
+                        output.innerHTML += activityOutput;
+                    });
+        
+                    updatePagination();
+                    attachImageClickEvents();
+                }
+        
+                function attachImageClickEvents() {
+                    const images = document.querySelectorAll('.image-container img');
+                    images.forEach(image => {
+                        image.addEventListener('click', (event) => {
+                            const largeImageElement = document.getElementById('largeImageElement');
+                            largeImageElement.src = event.target.src;
+                            document.getElementById('large-image').style.display = 'block';
+                            document.getElementById('overlay').style.display = 'block';
+                        });
+                    });
+        
+                    // Close large image on overlay or image click
+                    document.getElementById('overlay').addEventListener('click', closeLargeImage);
+                    document.getElementById('large-image').addEventListener('click', closeLargeImage);
+                }
+        
+                function closeLargeImage() {
+                    document.getElementById('large-image').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                }
+        
+                function updatePagination() {
+                    const pagination = document.getElementById('pagination');
+                    pagination.innerHTML = '';
+        
+                    const totalPages = Math.ceil(activities.length / itemsPerPage);
+                    if (currentPage > 1) {
+                        pagination.innerHTML += `<button onclick="changePage(${currentPage - 1})">หน้าก่อน</button>`;
+                    }
+                    if (currentPage < totalPages) {
+                        pagination.innerHTML += `<button onclick="changePage(${currentPage + 1})">หน้าถัดไป</button>`;
+                    }
+                }
+        
+                function changePage(page) {
+                    currentPage = page;
+                    displayActivities();
+                }
+        
+                displayActivities();
+            </script>
+        </div>
+
+<!-- ติดต่อเรา --> 
+    
+    <div class=" text-center py-5" style="background-color: rgb(52, 52, 52);">
+            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-4">
+                Contact Us
+            </a>
+        <div class="col py-5" style="background-color: rgb(52, 52, 52);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.99745219148!2d100.58567207845888!3d13.657918652493462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a1af673a5ded%3A0xefcd2ebe5a4c66b2!2sThai%20Central%20Mechanics%20Co.%2C%20Ltd!5e0!3m2!1sth!2sth!4v1726049640474!5m2!1sth!2sth" 
+                width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+            <div>
+                <div class="contact-info-card p-5 mb-10" style="background-color: rgb(52, 52, 52); border: none; box-shadow: none;">
+                    <img src="img/tcm_logo1.gif" alt="TCM Logo" class="img-fluid mb-3">
+                    <h4 class="text-white">Thai Central Mechanics Co., Ltd. </h4>
+                    <p class="text-white">
+                        เลขที่ 1 หมู่ 10 ซ.วัดมหาวงษ์ ถ.ปู่เจ้าสมิงพราย ต.สำโรง อ.พระประแดง จ.สมุทรปราการ 10130
+                    </p>
+                    <p class="text-white">
+                        1 Moo 10 Soi Watmahawong, Poochaosamingprai Rd., T.Samrong, A.Phrapradaeng, Samutprakarn 10130 Thailand.
+                    </p>
+                    <p class="text-white">
+                    Telephone (Tel.): +66 2748-5313-5 <br> Fax: +66 2399-0365
+                    </p>  
+                </div>
+            </div>
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <a href="https://www.facebook.com/MachineryTCM">
+                            <img src="img/icon/facebook.png" class="icon-img">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.youtube.com/@infotcm1989">
+                            <img src="img/icon/youtube.png" class="icon-img">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="img/icon/mail.png"  alt="Mail Icon" class="icon-img" onclick="document.getElementById('id01').style.display='block'">                        
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="img/icon/phone.png" alt="Phone Icon" class="icon-img">                        
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="img/icon/fax-machine.png" alt="Fax Machine Icon" class="icon-img">                        
+                        </a>
+                    </div>
+                </div>
+                <div class="row align-items-center text-white">
+                    <div class="col">facebook</div>
+                    <div class="col">YouTube</div>
+                    <div class="col">Mail</div>
+                    <div class="col"><a class="text-white">+66 2748-5313-5</a></div>
+                    <div class="col"><a class="text-white">+66 2399-0365</a></div>
+                </div> 
+            </div>
+            <!-- เมล --> 
+            <div id="id01" class="modal">
+                <div class="modal-content">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    
+                    <form class="email-form">
+                        <h5 class="modal-title" id="exampleModalLabelEmail">Email us</h5>
+                        <div class="form-group mb-3">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Please enter your name." required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Please enter your email." required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
+                        </div>
+                        <div class="form-actions text-center">
+                            <input type="button" value="Send" class="btn btn-primary" onclick="sendMail()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <style>
+                /* Modal background */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0,0,0,0.4);
+                    transition: opacity 0.3s ease;
+                }
+            
+                /* Modal content */
+                .modal-content {
+                    background-color: #fff;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 80%;
+                    max-width: 600px;
+                    position: relative; /* Ensure the close button is positioned relative to this */
+                }
+            
+                /* Close button */
+                .close {
+                    color: #000;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                }
+            
+                .close:hover,
+                .close:focus {
+                    color: #f00;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            
+                /* Form title */
+                .modal-title {
+                    font-size: 1.5em;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            
+                /* Form elements */
+                .form-group {
+                    margin-bottom: 15px;
+                }
+            
+                .form-control {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+            
+                .form-control:focus {
+                    border-color: #4CAF50;
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                }
+            
+                /* Button styling */
+                .form-actions {
+                    margin-top: 20px;
+                }
+            
+                .form-actions input[type="button"] {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 12px 30px;
+                    margin: 5px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    transition: background-color 0.3s, transform 0.2s;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+            
+                .form-actions input[type="button"]:hover {
+                    background-color: #45a049;
+                    transform: translateY(-3px);
+                }
+            
+                .form-actions input[type="button"]:active {
+                    background-color: #397d39;
+                    transform: translateY(0);
+                }
+            </style>
+            
+            <script>
+                const sendMail = () => {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+            
+                    if (name && email && message) {
+                        window.open(`https://mail.google.com/mail/u/0/?view=cm&ui=2&tf=0&fs=1&to=info@tcm1989.com&su=เมลล์จากคุณ${encodeURIComponent(name + ' ' + email)}&body=${encodeURIComponent(message)}`);
+                    } else {
+                        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                    }
+                }
+            </script>
+    </div>
+
+<!-- ส่วนท้าย -->
+
+    <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
+                © 2024 Your Company. All Rights Reserved.
+            </span>
+            <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
+                Designed By Thanet.P
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
