@@ -363,164 +363,211 @@
                 Events and News
             </a>
         </div>
-
-        <div style="background-color: rgb(52, 52, 52); padding: 10px;">
-            <style>
-                h1, h2 {
-                    color: #fff;
-                    text-align: center; /* จัดกลางหัวข้อ */
-                }
-                #output {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                    gap: 20px;
-                    margin-top: 20px; /* เพิ่มระยะห่างจากหัวข้อ */
-                }
-                .activity {
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    padding: 10px;
-                    background-color: #f9f9f9;
-                    color: #333; /* เปลี่ยนสีข้อความภายใน */
-                }
-                .image-container img {
-                    max-width: 100px; /* ปรับขนาดตามที่ต้องการ */
-                    height: 100px; /* คงสัดส่วนภาพ */
-                    margin-right: 10px;
-                    cursor: pointer;
-                    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบ smooth */
-                }
-                #large-image {
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    max-width: 90%;
-                    max-height: 90%;
-                    display: none;
-                    z-index: 1000;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    padding: 10px;
-                    border-radius: 5px;
-                }
-                #large-image img {
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-                #overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.7);
-                    display: none;
-                    z-index: 999;
-                }
-        
-                /* Styles for the pagination buttons */
-                #pagination {
-                    text-align: center; /* จัดปุ่มให้อยู่ตรงกลาง */
-                    margin-top: 20px;
-                }
-                #pagination button {
-                    padding: 10px 20px;
-                    background-color: #5cb85c;
-                    color: white;
-                    border: none;
-                    border-radius: 5px;
-                    margin: 0 5px; /* ระยะห่างระหว่างปุ่ม */
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                }
-                #pagination button:hover {
-                    background-color: #4cae4c;
-                }
-            </style>
-        
-            <div id="output"></div>
-            <div id="pagination"></div>
-        
-            <!-- Large Image Display -->
-            <div id="overlay"></div>
-            <div id="large-image">
-                <img id="largeImageElement" src="" alt="Large Image">
+        <div class="row row-cols-1 row-cols-md-3 p-3" id="activity-container" style="background-color: rgb(52, 52, 52);">
+            <!-- Activity blocks will go here -->
+            <div class="col activity" style="display: none;">
+                <div class="border bg-light p-3 rounded"> 
+                    <h3>🌟 ข่าวสารกิจกรรม [ชื่อบริษัท] 🌟</h3>
+                    <div class="details">
+                        <p><strong>📅 วันที่:</strong> [วัน/เดือน/ปี]</p>
+                        <p><strong>📝 หัวข้อ:</strong> [ชื่อกิจกรรม]</p>
+                        <p><strong>📍 สถานที่:</strong> [สถานที่จัดกิจกรรม]</p>
+                    </div>
+                    <div class="footer">
+                        <p>📷 ภาพกิจกรรม:</p>
+                        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                        </div>
+                    </div>
+                </div>
             </div>
-        
-            <script>
-                let activities = JSON.parse(localStorage.getItem('activities')) || [];
-                let currentPage = 1;
-                const itemsPerPage = 3;
-        
-                function displayActivities() {
-                    const output = document.getElementById('output');
-                    output.innerHTML = '';
-        
-                    const start = (currentPage - 1) * itemsPerPage;
-                    const end = start + itemsPerPage;
-                    const paginatedActivities = activities.slice(start, end);
-        
-                    paginatedActivities.forEach(activity => {
-                        const activityOutput = `
-                            <div class="activity">
-                                <p><strong>เรื่อง:</strong> ${activity.name}</p>
-                                <p><strong>วันที่:</strong> ${activity.date}</p>
-                                <p><strong>สถานที่:</strong> ${activity.location}</p>
-                                <p><strong>รายละเอียด:</strong> ${activity.description}</p>
-                                <p><strong>รูปภาพ:</strong></p>
-                                <div class="image-container">${activity.images}</div>
-                            </div>
-                        `;
-                        output.innerHTML += activityOutput;
-                    });
-        
-                    updatePagination();
-                    attachImageClickEvents();
-                }
-        
-                function attachImageClickEvents() {
-                    const images = document.querySelectorAll('.image-container img');
-                    images.forEach(image => {
-                        image.addEventListener('click', (event) => {
-                            const largeImageElement = document.getElementById('largeImageElement');
-                            largeImageElement.src = event.target.src;
-                            document.getElementById('large-image').style.display = 'block';
-                            document.getElementById('overlay').style.display = 'block';
-                        });
-                    });
-        
-                    // Close large image on overlay or image click
-                    document.getElementById('overlay').addEventListener('click', closeLargeImage);
-                    document.getElementById('large-image').addEventListener('click', closeLargeImage);
-                }
-        
-                function closeLargeImage() {
-                    document.getElementById('large-image').style.display = 'none';
-                    document.getElementById('overlay').style.display = 'none';
-                }
-        
-                function updatePagination() {
-                    const pagination = document.getElementById('pagination');
-                    pagination.innerHTML = '';
-        
-                    const totalPages = Math.ceil(activities.length / itemsPerPage);
-                    if (currentPage > 1) {
-                        pagination.innerHTML += `<button onclick="changePage(${currentPage - 1})">หน้าก่อน</button>`;
-                    }
-                    if (currentPage < totalPages) {
-                        pagination.innerHTML += `<button onclick="changePage(${currentPage + 1})">หน้าถัดไป</button>`;
-                    }
-                }
-        
-                function changePage(page) {
-                    currentPage = page;
-                    displayActivities();
-                }
-        
-                displayActivities();
-            </script>
+            <div class="col activity" style="display: none;">
+                <div class="border bg-light p-3 rounded"> 
+                    <h3>🌟 ข่าวสารกิจกรรม [ชื่อบริษัท] 🌟</h3>
+                    <div class="details">
+                        <p><strong>📅 วันที่:</strong> [วัน/เดือน/ปี]</p>
+                        <p><strong>📝 หัวข้อ:</strong> [ชื่อกิจกรรม]</p>
+                        <p><strong>📍 สถานที่:</strong> [สถานที่จัดกิจกรรม]</p>
+                    </div>
+                    <div class="footer">
+                        <p>📷 ภาพกิจกรรม:</p>
+                        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col activity" style="display: none;">
+                <div class="border bg-light p-3 rounded"> 
+                    <h3>🌟 ข่าวสารกิจกรรม [ชื่อบริษัท] 🌟</h3>
+                    <div class="details">
+                        <p><strong>📅 วันที่:</strong> [วัน/เดือน/ปี]</p>
+                        <p><strong>📝 หัวข้อ:</strong> [ชื่อกิจกรรม]</p>
+                        <p><strong>📍 สถานที่:</strong> [สถานที่จัดกิจกรรม]</p>
+                    </div>
+                    <div class="footer">
+                        <p>📷 ภาพกิจกรรม:</p>
+                        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col activity" style="display: none;">
+                <div class="border bg-light p-3 rounded"> 
+                    <h3>🌟 ข่าวสารกิจกรรม [ชื่อบริษัท] 🌟</h3>
+                    <div class="details">
+                        <p><strong>📅 วันที่:</strong> [วัน/เดือน/ปี]</p>
+                        <p><strong>📝 หัวข้อ:</strong> [ชื่อกิจกรรม]</p>
+                        <p><strong>📍 สถานที่:</strong> [สถานที่จัดกิจกรรม]</p>
+                    </div>
+                    <div class="footer">
+                        <p>📷 ภาพกิจกรรม:</p>
+                        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                            <img src="img/activity/CP RAM/92065.jpg" alt="" style="width: 80px; margin: 5px;" onmouseover="showLargeImage(this.src)" onmouseout="hideLargeImage()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for additional activity blocks -->
         </div>
+        
+        <!-- Tooltip for displaying large images -->
+        <div id="largeImageTooltip" style="position: absolute; display: none; z-index: 1000;" >
+            <img id="tooltipImage" src="" alt="" style="max-width: 500px; border: 2px solid #ccc;">
+        </div>
+        
+        <!-- Pagination buttons -->
+        <div class="text-center " style="background-color: rgb(52, 52, 52);">
+            <div class="btn-group" role="group" aria-label="Pagination">
+                <button id="prevPageButton" class="btn btn-secondary" style="display: none;" onclick="showPreviousPage()">Previous</button>
+                <button id="nextPageButton" class="btn btn-primary" style="display: none;" onclick="showNextPage()">Next</button>
+            </div>
+        </div>
+        
+        <script>
+            const itemsPerPage = 3; // Number of activities to display per page
+            let currentPage = 1;
+        
+            const activities = Array.from(document.querySelectorAll('.activity'));
+            const totalPages = Math.ceil(activities.length / itemsPerPage);
+            const nextPageButton = document.getElementById('nextPageButton');
+            const prevPageButton = document.getElementById('prevPageButton');
+        
+            function showPage(page) {
+                // Hide all activities
+                activities.forEach((activity) => {
+                    activity.style.display = 'none';
+                });
+        
+                // Show only activities for the current page
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                for (let i = start; i < end && i < activities.length; i++) {
+                    activities[i].style.display = 'block';
+                }
+        
+                // Manage the visibility of Next and Previous buttons
+                prevPageButton.style.display = (page > 1) ? 'block' : 'none';
+                nextPageButton.style.display = (page < totalPages) ? 'block' : 'none';
+            }
+        
+            function showNextPage() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            }
+        
+            function showPreviousPage() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            }
+        
+            function showLargeImage(imageSrc) {
+        const tooltipImage = document.getElementById('tooltipImage');
+        tooltipImage.src = imageSrc;
+        
+        const tooltip = document.getElementById('largeImageTooltip');
+        tooltip.style.display = 'block';
+    }
+
+    function hideLargeImage() {
+        const tooltip = document.getElementById('largeImageTooltip');
+        tooltip.style.display = 'none';
+    }
+        
+            // Initialize to show the first page
+            showPage(currentPage);
+        </script>
+        
+        <style>
+             #largeImageTooltip {
+        position: fixed; /* ตั้งให้ภาพอยู่ในตำแหน่งที่แน่นอน */
+        top: 50%; /* กึ่งกลางแนวตั้ง */
+        left: 50%; /* กึ่งกลางแนวนอน */
+        transform: translate(-50%, -50%); /* ย้ายภาพไปยังกลางจอ */
+        display: none; /* ไม่ให้แสดงโดยค่าเริ่มต้น */
+        z-index: 1000; /* อยู่ข้างหน้า */
+        background-color: rgb(0, 0, 0); /* พื้นหลังสีดำโปร่งใส */
+        padding: 10px; /* เพิ่มระยะรอบ */
+        border-radius: 8px; /* มุมมน */
+    }
+
+    #largeImageTooltip img {
+        max-width: 90vw; /* ความกว้างสูงสุด 90% ของหน้าจอ */
+        max-height: 90vh; /* ความสูงสูงสุด 90% ของหน้าจอ */
+        border: 2px solid #ccc; /* กรอบภาพ */
+    }
+            .btn-group {
+                margin: 20px 0; /* Add space around the button group */
+            }
+            
+            .btn {
+                border-radius: 30px; /* Round button corners */
+                padding: 10px 20px; /* Increase padding */
+                font-size: 16px; /* Increase font size */
+                transition: background-color 0.3s, transform 0.2s; /* Add transition effects */
+            }
+        
+            .btn-secondary {
+                background-color: #6c757d; /* Customize secondary button color */
+            }
+        
+            .btn-secondary:hover {
+                background-color: #5a6268; /* Darker on hover */
+                transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+        
+            .btn-primary {
+                background-color: #007bff; /* Customize primary button color */
+            }
+        
+            .btn-primary:hover {
+                background-color: #0056b3; /* Darker on hover */
+                transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+        
+            .btn:focus {
+                box-shadow: none; /* Remove focus outline */
+            }
+        
+            /* New CSS for enlarging image on hover */
+            .activity img {
+                transition: transform 0.2s ease; /* เพิ่มการเปลี่ยนแปลงขนาด */
+            }
+        
+            .activity img:hover {
+                transform: scale(5); /* ขยายขนาดเมื่อชี้ */
+                z-index: 10; /* ทำให้ภาพอยู่ข้างหน้า */
+            }
+        </style>
 
 <!-- ติดต่อเรา --> 
     
