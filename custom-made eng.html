@@ -1,234 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>TCM1989</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCM1989</title>
+    <link rel="icon" href="img\tcm_logo1.gif">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <link rel="icon" href="tcm_logo1 - Copy.gif">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <style>
-
-
-    /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
-    }
-
-    /* Second image (Portfolio) */
-    .bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
-    min-height: 400px;
-    }
-
-    /* Third image (Contact) */
-    .bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
-    min-height: 400px;
-    }
-
-    .w3-wide {letter-spacing: 10px;}
-    .w3-hover-opacity {cursor: pointer;}
-
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-        min-height: 400px;
-    }
-    }
-    </style>
-    <!-- แทบบาร์ -->
-    <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-    
-    // Change style of navbar on scroll
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-        var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-        } else {
-            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- แทบบาร์ -->
+        <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img").src = element.src;
+          document.getElementById("modal").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
         }
-    }
-    
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
+        
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
         }
-    }
-    </script>
- 
-  
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
 </head>
 <body>
-<!-- ส่วนหัว -->
-<!-- Improved Navigation Bar -->
+        <!--- ส่วนหัว --->
+        <div>
 
-        <div class="w3-top" style=" background-color: rgba(255, 255, 255, 0.46);">
-            <div class="w3-bar w3-padding-16" id="myNavbar">
-                <!-- Hamburger Icon for Small Screens -->
-                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <!-- Logo Section -->
-                <a class="w3-bar-item w3-button w3-padding-0" style="height: 70px;" href="index eng.html">
-                    <img src="tcm_logo - Copy.png" alt="Logo" style="height:100%; max-height: 60px;">
-                </a>
-                <!-- Menu Items -->
-                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">About Us</a>
-                <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Products and Services</a>
-                <a href="index eng.html#item-1-3" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Events and News</a>
-                <a href="index eng.html#item-1-4" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Contact Us</a>
-                <!-- Language Icons -->
-                    <div class="w3-right">
-                        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                            <img src="th_th.gif" alt="ไทย" style="height: 25px;">
-                        </a>
-                        <a href="index eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                            <img src="en_gb.gif" alt="English" style="height: 25px;">
-                        </a>
-                    </div>
-                    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                        <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
-                        <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
-                        <a href="index eng.html#item-1-3" class="w3-bar-item w3-button" onclick="toggleFunction()">Events and News</a>
-                        <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
-                        <a href="index.html" class="w3-bar-item w3-button">
-                            <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
-                        </a>
-                        <a href="index eng.html" class="w3-bar-item w3-button" >
-                            <img src="en_gb.gif" alt="English" style="height: 25px;">
-                        </a>
-                    </div>
+            <div class="w3-top" style=" background-color: rgba(255, 255, 255, 0.46);">
+                <div class="w3-bar w3-padding-16" id="myNavbar">
+                    <!-- Hamburger Icon for Small Screens -->
+                    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- Logo Section -->
+                    <a class="w3-bar-item w3-button w3-padding-0" style="height: 70px;" href="index eng.html">
+                        <img src="img/tcm_logo.png" alt="Logo" style="height:100%; max-height: 60px;">
+                    </a>
+                    <!-- Menu Items -->
+                    <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">About Us</a>
+                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Products and Services</a>
+                    <a href="index eng.html#item-1-3" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Events and News</a>
+                    <a href="index eng.html#item-1-4" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px;">Contact Us</a>
+                    <!-- Language Icons -->
+                        <div class="w3-right">
+                            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="img/icon/th_th.gif" alt="ไทย" style="height: 25px;">
+                            </a>
+                            <a href="index eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
+                            </a>
+                        </div>
+                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                            <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+                            <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
+                            <a href="index eng.html#item-1-3" class="w3-bar-item w3-button" onclick="toggleFunction()">Events and News</a>
+                            <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
+                            <a href="index.html" class="w3-bar-item w3-button">
+                                <img src="img/icon/th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                            </a>
+                            <a href="index eng.html" class="w3-bar-item w3-button" >
+                                <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
+                            </a>
+                        </div>
+                    
+                </div>
+            </div>
+            <div id="carouselExampleInterval000" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="img/2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <img src="img/1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="7000">
+                    <img src="img/3.jpg" class="d-block w-100" alt="...">
+                </div>
+                </div>
                 
-            </div>
-        </div>
-        <div id="carouselExampleInterval000" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="2 - Copy.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-                <img src="1 - Copy.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="7000">
-                <img src="3 - Copy.jpg" class="d-block w-100" alt="...">
-            </div>
             </div>
             
         </div>
-
-<!-- ส่วนเนื้อหา -->
-
-    <div class="row g-4  row-cols-lg-4">
-        <style>
-                            .icon-img {
-                    height: 50px; /* Adjust height as needed */
-                    margin-bottom: 10px;
-                }
-
-                .feature-title {
-                    font-size: 1.25rem;
-                    margin-bottom: 5px;
-                }
-
-                .feature-description {
-                    font-size: 1rem;
-                    margin-bottom: 15px;
-                }
-
-                .row-cols-lg-4 .col {
-                    text-align: center;
-                    padding: 15px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                    background-color: #f9f9f9;
-                    transition: background-color 0.3s, box-shadow 0.3s;
-                }
-
-                .row-cols-lg-4 .col:hover {
-                    background-color: #e9ecef;
-                    box-shadow: 0 4px 7px rgba(0,0,0,0.1);
-                }
-
-        </style>
-        <div class="col">
-            <a >
-                <img src="employees.png" alt="Icon of employees" class="icon-img">
-            </a>
-            <h4 class="feature-title">TEAM</h4>
-            <p class="feature-description">We have a team that specializes in designing and building machines.</p>
-            <p class="feature-description">เรามีทีมที่เชี่ยวชาญด้านการออกแบบและสร้างเครื่องจักร</p>
+        <!------------->
+        
+        <!--- แนะนำ --->
+        <div>
+            <div class="row g-4  row-cols-lg-4">
+                <style>
+                                    .icon-img {
+                            height: 50px; /* Adjust height as needed */
+                            margin-bottom: 10px;
+                        }
+        
+                        .feature-title {
+                            font-size: 1.25rem;
+                            margin-bottom: 5px;
+                        }
+        
+                        .feature-description {
+                            font-size: 1rem;
+                            margin-bottom: 15px;
+                        }
+        
+                        .row-cols-lg-4 .col {
+                            text-align: center;
+                            padding: 15px;
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                            background-color: #f9f9f9;
+                            transition: background-color 0.3s, box-shadow 0.3s;
+                        }
+        
+                        .row-cols-lg-4 .col:hover {
+                            background-color: #e9ecef;
+                            box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+                        }
+        
+                </style>
+                <div class="col">
+                    <a >
+                        <img src="img/icon/employees.png" alt="Icon of employees" class="icon-img">
+                    </a>
+                    <h4 class="feature-title">TEAM</h4>
+                    <p class="feature-description">We have a team that specializes in designing and building machines.</p>
+                    <p class="feature-description">เรามีทีมที่เชี่ยวชาญด้านการออกแบบและสร้างเครื่องจักร</p>
+                </div>
+        
+                <div class="col">
+                    <a >
+                        <img src="img/icon/machinery.png" alt="Icon of machinery" class="icon-img">
+                    </a>
+                    <h4 class="feature-title">MACHINERY</h4>
+                    <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>
+                    <p class="feature-description">เครื่องจักรของเราสร้างขึ้นเพื่อให้ตรงตามมาตรฐานคุณภาพที่เป็นที่ยอมรับ พร้อมการรับประกันหนึ่งปีเต็มซึ่งรวมถึงอะไหล่และบริการค่าแรงฟรี</p>
+                </div>
+        
+                <div class="col">
+                    <a >
+                        <img src="img/icon/design-thinking.png" alt="Icon of design-thinking" class="icon-img">
+                    </a>
+                    <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
+                    <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere. Responding to the specific needs of customers exactly.</p>
+                    <p class="feature-description">เรามุ่งเน้นการออกแบบ สร้างสรรค์ และพัฒนาเครื่องจักรเฉพาะทางที่ไม่สามารถหาซื้อได้ทั่วไป ตอบสนองความต้องการเฉพาะของลูกค้าอย่างตรงจุด</p>
+                </div>
+        
+                <div class="col">
+                    <a >
+                        <img src="img/icon/service.png" alt="Icon of service" class="icon-img">
+                    </a>
+                    <h4 class="feature-title">QUALITY ASSURANCE</h4>
+                    <p class="feature-description">We operate under a quality management system that covers every step, from designing, producing, and assembling machines to product delivery, according to quality standards ISO 9001:2015.</p>
+                    <p class="feature-description">เราดำเนินงานภายใต้ระบบการจัดการคุณภาพที่ครอบคลุมทุกขั้นตอน ตั้งแต่การออกแบบ ผลิต และประกอบเครื่องจักร จนถึงการส่งมอบผลิตภัณฑ์ ตามมาตรฐานคุณภาพ ISO 9001:2015</p>
+                </div>
+            </div>
         </div>
+        <!------------->
 
-        <div class="col">
-            <a >
-                <img src="machinery.png" alt="Icon of machinery" class="icon-img">
-            </a>
-            <h4 class="feature-title">MACHINERY</h4>
-            <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>
-            <p class="feature-description">เครื่องจักรของเราสร้างขึ้นเพื่อให้ตรงตามมาตรฐานคุณภาพที่เป็นที่ยอมรับ พร้อมการรับประกันหนึ่งปีเต็มซึ่งรวมถึงอะไหล่และบริการค่าแรงฟรี</p>
-        </div>
-
-        <div class="col">
-            <a >
-                <img src="design-thinking.png" alt="Icon of design-thinking" class="icon-img">
-            </a>
-            <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
-            <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere. Responding to the specific needs of customers exactly.</p>
-            <p class="feature-description">เรามุ่งเน้นการออกแบบ สร้างสรรค์ และพัฒนาเครื่องจักรเฉพาะทางที่ไม่สามารถหาซื้อได้ทั่วไป ตอบสนองความต้องการเฉพาะของลูกค้าอย่างตรงจุด</p>
-        </div>
-
-        <div class="col">
-            <a >
-                <img src="service.png" alt="Icon of service" class="icon-img">
-            </a>
-            <h4 class="feature-title">QUALITY ASSURANCE</h4>
-            <p class="feature-description">We operate under a quality management system that covers every step, from designing, producing, and assembling machines to product delivery, according to quality standards ISO 9001:2015.</p>
-            <p class="feature-description">เราดำเนินงานภายใต้ระบบการจัดการคุณภาพที่ครอบคลุมทุกขั้นตอน ตั้งแต่การออกแบบ ผลิต และประกอบเครื่องจักร จนถึงการส่งมอบผลิตภัณฑ์ ตามมาตรฐานคุณภาพ ISO 9001:2015</p>
-        </div>
-    </div>
-
-<!-- สินค้าและบริการ -->
-
-        <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px ">
+        <!--- สินค้าและบริการ --->
+        <div>
+          <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px ">
             <div class="text-center mb-4">
                 <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-a-1">
                     Custom-made machines
@@ -391,19 +347,19 @@
                 }
 
                                                                 .item-1 {
-                                                                background-image: url('sp1.JPG');
+                                                                background-image: url('img/Products/SPECIAL MACHINE SERIES/1.JPG');
                                                                 }
                                                                 .item-2 {
-                                                                background-image: url('sp2.JPG');
+                                                                background-image: url('img/Products/SPECIAL MACHINE SERIES/2.JPG');
                                                                 }
                                                                 .item-3 {
-                                                                background-image: url('sp3.JPG');
+                                                                background-image: url('img/Products/SPECIAL MACHINE SERIES/3.JPG');
                                                                 }
                                                                 .item-4 {
-                                                                background-image: url('sp4.JPG');
+                                                                background-image: url('img/Products/SPECIAL MACHINE SERIES/4.JPG');
                                                                 }
                                                                 .item-5 {
-                                                                background-image: url('sp5.JPG');
+                                                                background-image: url('img/Products/SPECIAL MACHINE SERIES/5.JPG');
                                                                 }
                                                             
 
@@ -522,20 +478,25 @@
                     // Initialize to show the first page
                     showPage(currentPage);
                   </script>
+          </div>
         </div>
+        <!-------------------->
 
-<!-- ส่วนท้าย -->
-
-    <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
-        <div class="container d-flex justify-content-between align-items-center">
-            <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
-                © 2024 Your Company. All Rights Reserved.
-            </span>
-            <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
-                Designed By Thanet.P
-            </span>
+        <!--- ส่วนเคดิต --->
+        <div>
+            <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
+                        © 2024 Your Company. All Rights Reserved.
+                    </span>
+                    <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
+                        Designed By Thanet.P
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
+        <!--------------->
+
 
 </body>
 </html>
