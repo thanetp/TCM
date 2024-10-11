@@ -285,7 +285,7 @@
             justify-content: center;
             gap: 20px; /* Space between buttons */
                     }
-    
+        
                     .pagination-btn {
                         padding: 10px 20px;
                         background-color: #4CAF50; /* Green background */
@@ -296,11 +296,11 @@
                         cursor: pointer;
                         transition: background-color 0.3s ease;
                     }
-    
+        
                     .pagination-btn:hover {
                         background-color: #45a049; /* Darker green on hover */
                     }
-    
+        
                     .pagination-btn:disabled {
                         background-color: #ccc; /* Gray background when disabled */
                         cursor: not-allowed;
@@ -317,7 +317,7 @@
                     --point-color: #ffffff;
                     --point-spacing: 8px;
                     }
-    
+        
                     ::-webkit-scrollbar {
                     width: 6px;
                     background-color: var(--color-1);
@@ -329,26 +329,35 @@
                     height: 50px;
                     background-color: var(--color-2);
                     }
-    
+        
                     *,
                     *:after,
                     *::before {
                     box-sizing: border-box;
                     }
-    
+        
                     html,
                     body {
                     background-image: url("");
                     user-select: none;
                     font-family: 'Switzer', sans-serif;
                     }
-    
+        
+                    h1 {
+                    position: relative;
+                    font-family: 'Khand', sans-serif;
+                    font-size: calc(1vw + 1vh + .5vmin);
+                    text-transform: uppercase;
+                    padding-bottom: 1rem;
+                    color: #ffdd40;
+                    }
+        
                     .container1 {
                     padding: 2rem 0;
                     margin: 0 auto;
                     width: 80vw;
                     }
-    
+        
                     .gallery-wrap {
                     display: flex;
                     flex-direction: row;
@@ -358,7 +367,7 @@
                     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
                     background: rgba(255, 255, 255, 0.0);
                     }
-    
+        
                     .item {
                     flex: 1;
                     height: 100%;
@@ -370,16 +379,16 @@
                     filter: grayscale(1) saturate(0) brightness(var(--photo-brightness)) contrast(var(--photo-contrast));
                     transition: flex 0.4s cubic-bezier(.32, .79, .38, .99), filter 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000);
                     }
-    
+        
                     .item:hover {
                     flex: 7;
                     filter: grayscale(0) saturate(1.3) blur(0px);
                     }
-    
+        
                     .item:hover .caption {
                     opacity: 1;
                     }
-    
+        
                     .item:before {
                     content: "";
                     position: absolute;
@@ -393,11 +402,11 @@
                     opacity: 0.3;
                     pointer-events: none;
                     }
-    
+        
                     .item:hover:before {
                     opacity: 0;
                     }
-    
+        
                     .caption {
                     position: fixed;
                     left: .5rem;
@@ -413,15 +422,15 @@
                     transition: opacity 0.2s ease, backdrop-filter 2s cubic-bezier(0.860, 0.000, 0.070, 1.000);
                     opacity: 0;
                     }
-    
+        
                     .caption:hover {
                     backdrop-filter: blur(30px);
                     }
-    
+        
                     .caption p {
                     width: 100%;
                     }
-    
+        
                     .caption h1 {
                     color: rgb(0, 0, 0);
                     }
