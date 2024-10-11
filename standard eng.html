@@ -196,38 +196,71 @@
         <div>
             <div class="row  row-cols-lg-5">
                 <style>
-                    .icon-img {
-                        height: 50px; /* Adjust height as needed */
-                        margin-bottom: 5px;
-                    }
-        
-                    .feature-title {
-                        font-size: 1.5rem;
-                        margin-bottom: 10px;
-                        color: #333;
-                    }
-        
-                    .feature-description {
-                        font-size: 1rem;
-                        margin-bottom: 15px;
-                        color: #555;
-                    }
-        
-                    .row-cols-lg-5 .col {
-                        text-align: center;
-                        border: 2px solid #ddd;
-                        background-color: #ffffff;
-                        padding: 5px;
-                        transition: background-color 0.3s, box-shadow 0.3s;
-                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                    }
-        
-                    .row-cols-lg-5 .col:hover {
-                        background-color: #f0f8ff;
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-                        transform: translateY(-2px);
-                    }
-        
+                    .row {
+              
+              justify-content: center; /* จัดคอนเทนต์ให้ตรงกลางในแนวนอน */
+              margin: 0 auto; /* จัดให้มีระยะห่างซ้ายขวาอัตโนมัติ */
+          }
+          .icon-img {
+              height: 50px; /* ปรับความสูงของไอคอน */
+              margin-bottom: 5px;
+          }
+      
+          .feature-title {
+              font-size: 20px; /* ขนาดฟอนต์สำหรับหัวข้อ */
+              margin-bottom: 10px;
+              color: #333;
+          }
+      
+          .feature-description {
+              font-size: 15px; /* ขนาดฟอนต์สำหรับคำอธิบาย */
+              margin-bottom: 10px;
+              color: #555;
+          }
+      
+          .row-cols-lg-5 {
+              width: 100%; /* กำหนดให้ความกว้างเท่ากับ .navbar */
+              box-sizing: border-box; /* คำนวณขนาดรวมกับ padding และ border */
+          }
+      
+          .row-cols-lg-5 .col {
+              text-align: center;
+              border: 2px solid #ddd;
+              background-color: #ffffff;
+              padding: 10px; /* เพิ่มการ padding เพื่อให้มีพื้นที่มากขึ้น */
+              transition: background-color 0.3s, box-shadow 0.3s;
+              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างบล็อก */
+          }
+      
+          .row-cols-lg-5 .col:hover {
+              background-color: #f0f8ff;
+              box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+              transform: translateY(-2px);
+          }
+      
+          @media (max-width: 700px) {
+              .row-cols-lg-5 {
+                  display: grid; /* ใช้ grid เพื่อควบคุมคอลัมน์ */
+                  grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์บนหน้าจอเล็ก */
+              }
+          }
+      
+          @media (max-width: 400px) {
+              .row-cols-lg-5 {
+                  grid-template-columns: 1fr; /* แสดง 1 คอลัมน์บนหน้าจอเล็กที่สุด */
+              }
+      
+              .feature-title {
+                  font-size: 18px; /* ขนาดฟอนต์เล็กลง */
+              }
+      
+              .feature-description {
+                  font-size: 14px; /* ขนาดฟอนต์เล็กลง */
+              }
+      
+              
+          }
                 </style>
                 
                 <div class="col">
