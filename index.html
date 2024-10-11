@@ -196,18 +196,18 @@
         <div class="row   row-cols-lg-5">
             <style>
     .icon-img {
-        height: 50px; /* Adjust height as needed */
+        height: 50px; /* ปรับความสูงของไอคอน */
         margin-bottom: 5px;
     }
 
     .feature-title {
-        font-size: 20px;
+        font-size: 20px; /* ขนาดฟอนต์สำหรับหัวข้อ */
         margin-bottom: 10px;
         color: #333;
     }
 
     .feature-description {
-        font-size: 15px;
+        font-size: 15px; /* ขนาดฟอนต์สำหรับคำอธิบาย */
         margin-bottom: 20px;
         color: #555;
     }
@@ -216,9 +216,10 @@
         text-align: center;
         border: 2px solid #ddd;
         background-color: #ffffff;
-        padding: 5px;
+        padding: 10px; /* เพิ่มการ padding เพื่อให้มีพื้นที่มากขึ้น */
         transition: background-color 0.3s, box-shadow 0.3s;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างบล็อก */
     }
 
     .row-cols-lg-5 .col:hover {
@@ -229,24 +230,30 @@
 
     @media (max-width: 768px) {
         .row-cols-lg-5 {
-            grid-template-columns: repeat(2, 1fr); /* Display 2 columns on smaller screens */
+            display: grid; /* ใช้ grid เพื่อควบคุมคอลัมน์ */
+            grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์บนหน้าจอเล็ก */
         }
     }
 
     @media (max-width: 576px) {
         .row-cols-lg-5 {
-            grid-template-columns: 1fr; /* Display 1 column on extra small screens */
+            grid-template-columns: 1fr; /* แสดง 1 คอลัมน์บนหน้าจอเล็กที่สุด */
         }
 
         .feature-title {
-            font-size: 18px; /* Slightly smaller title font */
+            font-size: 18px; /* ขนาดฟอนต์เล็กลง */
         }
 
         .feature-description {
-            font-size: 14px; /* Slightly smaller description font */
+            font-size: 14px; /* ขนาดฟอนต์เล็กลง */
+        }
+
+        .col {
+            padding: 15px; /* เพิ่ม padding สำหรับคอลัมน์ */
         }
     }
 </style>
+
             <div class="col">
                 <a >
                     <img src="employees.png" alt="Icon of employees" class="icon-img">
