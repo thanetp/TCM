@@ -141,13 +141,13 @@
                 <div id="header1" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="1.jpg" class="d-block w-100" alt="...">
+                        <img src="img/1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="10000">
-                        <img src="2.jpg" class="d-block w-100" alt="...">
+                        <img src="img/2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="7000">
-                        <img src="3.jpg" class="d-block w-100" alt="...">
+                        <img src="img/3.jpg" class="d-block w-100" alt="...">
                     </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                 </a>
                 <!-- Logo Section -->
                 <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
-                    <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
+                    <img  src="img/tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
                 </a>
                 <!-- Menu Items -->
                 <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
@@ -170,10 +170,10 @@
                         <!-- Language Icons -->
                             <div class="w3-right" style="padding: 20px 10px;">
                                 <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                                    <img src="img/icon/th_th.gif" alt="ไทย" style="height: 25px;">
                                 </a>
                                 <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                    <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
                                 </a>
                             </div>
                             <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -181,10 +181,10 @@
                                 <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
                                 <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
                                 <a href="index.html" class="w3-bar-item w3-button">
-                                    <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                                    <img src="img/icon/th_th.gif" alt="ภาษาไทย" style="height: 25px;">
                                 </a>
                                 <a href="index eng.html" class="w3-bar-item w3-button" >
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                    <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
                                 </a>
                             </div>
                 
@@ -194,78 +194,88 @@
         
         <!--- แนะนำ --->
         <div>
-            <div class="row g-5  row-cols-lg-5">
+            <div class="row  row-cols-lg-5">
                 <style>
-                        .icon-img {
-                            height: 50px; /* Adjust height as needed */
-                            margin-bottom: 5px;
-                        }
-
-                        .feature-title {
-                            font-size: 1.25rem;
-                            margin-bottom: 5px;
-                        }
-
-                        .feature-description {
-                            font-size: 1rem;
-                            margin-bottom: 15px;
-                        }
-
-                        .row-cols-lg-5 .col {
-                            text-align: center;
-                            border: 1px solid #ddd;
-                            border-radius: 5px;
-                            background-color: #f9f9f9;
-                            transition: background-color 0.3s, box-shadow 0.3s;
-                        }
-
-                        .row-cols-lg-5 .col:hover {
-                            background-color: #e9ecef;
-                            box-shadow: 0 4px 7px rgba(0,0,0,0.1);
-                        }
-
+                    .icon-img {
+                        height: 50px; /* Adjust height as needed */
+                        margin-bottom: 5px;
+                    }
+        
+                    .feature-title {
+                        font-size: 1.5rem;
+                        margin-bottom: 10px;
+                        color: #333;
+                    }
+        
+                    .feature-description {
+                        font-size: 1rem;
+                        margin-bottom: 15px;
+                        color: #555;
+                    }
+        
+                    .row-cols-lg-5 .col {
+                        text-align: center;
+                        border: 2px solid #ddd;
+                        
+                        background-color: #ffffff;
+                        padding: 5px;
+                        transition: background-color 0.3s, box-shadow 0.3s;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    }
+        
+                    .row-cols-lg-5 .col:hover {
+                        background-color: #f0f8ff;
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+                        transform: translateY(-2px);
+                    }
+        
+                    .row {
+                        margin: 2px 0;
+                    }
                 </style>
+                
                 <div class="col">
-                    <a >
-                        <img src="employees.png" alt="Icon of employees" class="icon-img">
+                    <a>
+                        <img src="img/icon/employees.png" alt="Icon of employees" class="icon-img">
                     </a>
                     <h4 class="feature-title">About Us</h4>
                     <p class="feature-description">We have a team that specializes in designing and building machines.</p>
                 </div>
-
-                <div class="col">
-                    <a >
-                        <img src="design-thinking.png" alt="Icon of design-thinking" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
-                    <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere. Responding to the specific needs of customers exactly.</p>
-                </div>
-
+        
                 <div class="col">
                     <a>
-                        <img src="new-product.png" alt="Icon of new-product" class="icon-img">
+                        <img src="img/icon/design-thinking.png" alt="Icon of design-thinking" class="icon-img">
+                    </a>
+                    <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
+                    <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere, responding to specific customer needs.</p>
+                </div>
+        
+                <div class="col">
+                    <a>
+                        <img src="img/icon/new-product.png" alt="Icon of new-product" class="icon-img">
                     </a>
                     <h4 class="feature-title">PRODUCT</h4>
                     <p class="feature-description">We create unique custom machinery that meets specific customer needs, enhancing operational efficiency across all sectors.</p>
                 </div>
-
+        
                 <div class="col">
-                    <a >
-                        <img src="security.png" alt="Icon of security" class="icon-img">
+                    <a>
+                        <img src="img/icon/security.png" alt="Icon of security" class="icon-img">
                     </a>
                     <h4 class="feature-title">WARRANTY</h4>
-                    <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>                    
+                    <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>
                 </div>
-
+        
                 <div class="col">
-                    <a >
-                        <img src="service.png" alt="Icon of service" class="icon-img">
+                    <a>
+                        <img src="img/icon/service.png" alt="Icon of service" class="icon-img">
                     </a>
                     <h4 class="feature-title">QUALITY ASSURANCE</h4>
-                    <p class="feature-description">We operate under a quality management system that covers every step, from designing, producing, and assembling machines to product delivery, according to quality standards ISO 9001:2015.</p>
+                    <p class="feature-description">We operate under a quality management system that covers every step, from designing and producing to delivering machines, according to ISO 9001:2015 standards.</p>
                 </div>
             </div>
         </div>
+        
         
         <!------------->
 
