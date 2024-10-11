@@ -195,6 +195,13 @@
               <div>
         <div class="row justify-content: center;  row-cols-lg-5">
             <style>
+              .row {
+        display: flex; /* ใช้ Flexbox */
+        justify-content: center; /* จัดคอนเทนต์ให้ตรงกลางในแนวนอน */
+        align-items: center; /* จัดคอนเทนต์ให้ตรงกลางในแนวตั้ง (ถ้าต้องการ) */
+        flex-wrap: wrap; /* ให้คอนเทนต์อยู่ในแถวใหม่ถ้าจำเป็น */
+        margin: 0 auto; /* จัดให้มีระยะห่างซ้ายขวาอัตโนมัติ */
+    }
     .icon-img {
         height: 50px; /* ปรับความสูงของไอคอน */
         margin-bottom: 5px;
