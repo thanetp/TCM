@@ -320,11 +320,25 @@
     
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <video controls autoplay muted loop style="width: 100%; height: auto;">
-                            <source src="img/profile.mp4" type="video/mp4">
-                            <source src="img/profile.mp4" type="video/ogg">
-                        </video>
-                    </div>
+                      <div class="video-responsive">
+                         <iframe src="https://www.youtube.com/embed/LYIxi8onuek?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <style>
+                          .video-responsive {
+                              position: relative;
+                              padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                              height: 0;
+                              overflow: hidden;
+                          }
+                          .video-responsive iframe {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%; /* แก้ไขเป็น 100% */
+                              height: 100%;
+                          }
+                      </style>
+                  </div>
     
                     <!-- Content Section -->
                     <div class="col-md-6" style="font-size: 13px;" >
