@@ -196,132 +196,141 @@
 
         <!--- เกี่ยวกับเรา --->
         <div>
-            <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
-            
-                <div class="text-center mb-4">
-                    <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
-                        About Us
-                    </a>
-                </div>
-    
-                <div class="row">
-                    <!-- Video Section -->
-                    <div class="col-md-6 mb-4">
-                        <video controls autoplay muted loop style="width: 100%; height: auto;">
-                            <source src="img/profile.mp4" type="video/mp4">
-                            <source src="img/profile.mp4" type="video/ogg">
-                        </video>
+    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;">
 
-                        <div class="row" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-                            <h1>บริการของเรา</h1>
-                        </div>
-                
-                        <div class="row row-cols-lg-5 mt-3">
-                            <div class="col text-center">
-                                <a>
-                                    <img src="design-thinking.png" alt="Icon of employees" class="icon-img">
-                                </a>
-                                <h6 class="feature-title">DESIGN & BUILD MACHINERY</h6>
-                            </div>
-                
-                            <div class="col text-center">
-                                <a>
-                                    <img src="build.png" alt="Icon of design-thinking" class="icon-img">
-                                </a>
-                                <h6 class="feature-title">Build</h6>
-                            </div>
-                
-                            <div class="col text-center">
-                                <a>
-                                    <img src="maintenance.png" alt="Icon of new-product" class="icon-img">
-                                </a>
-                                <h6 class="feature-title">Install</h6>
-                            </div>
-                
-                            <div class="col text-center">
-                                <a>
-                                    <img src="warranty.png" alt="Icon of security" class="icon-img">
-                                </a>
-                                <h6 class="feature-title">WARRANTY</h6>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- Content Section -->
-                    <div class="col-md-6" style="font-size: 14px;">
-                        <p class="mb-3">
-                            Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry. Our Manufacturing Solutions offer automated production system designs (Automation & Robotics) for factories equipped with control and communication systems that align with the Industry 4.0 concept.
-                        </p>
-                
-                        <p class="mb-3">
-                            Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems. We provide consulting services in research, development, design, and construction of machinery for the manufacturing sector, with a clearly defined scope of work that includes research and development, design, production, assembly, installation, testing, and training. Our team consists of highly skilled professionals with extensive experience.
-                        </p>
-                
-                        <p class="mb-3">
-                            The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
-                        </p>
-                        <ul class="mb-3">
-                            <li>
-                                <strong>Production Process Efficiency:</strong> The company utilizes automation technology to enhance precision and reduce errors. This includes the implementation of sensor systems that detect hazards, thereby increasing safety in manufacturing. These technologies contribute to higher efficiency and a safer working environment.
-                            </li>
-                            <li>
-                                <strong>Energy Efficiency:</strong> We focus on energy-saving solutions to lower costs and protect the environment. Our efforts include implementing renewable energy sources and energy-saving technologies that reduce operational costs while promoting sustainability.
-                            </li>
-                            <li>
-                                <strong>Innovation and Development:</strong> We invest in new technologies and innovations that help reduce costs and meet market demands. By fostering a culture of innovation, we create products that enhance value for our customers while maintaining competitive advantages.
-                            </li>
-                            <li>
-                                <strong>Environmental Responsibility:</strong> We are committed to reducing waste and promoting recycling. Our processes minimize waste generation and encourage the use of recyclable materials, ensuring that our operations contribute positively to both the environment and society.
-                            </li>
-                        </ul>
-                
-                        <p class="mb-3">
-                            With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible. Our commitment to excellence, efficiency, and sustainability positions us to lead the way in developing solutions that benefit both industry and the environment, ensuring a better future for all.
-                        </p>
-                    </div>
+        <div class="text-center mb-4">
+            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                About Us
+            </a>
+        </div>
+
+        <div class="row">
+            <!-- Video Section -->
+            <div class="col-md-6 mb-4">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                
-                <!-- CSS -->
+
                 <style>
-                    .row {
-                        justify-content: center;
-                        margin: 0 auto;
+                    .video-responsive {
+                        position: relative;
+                        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                        height: 0;
+                        overflow: hidden;
                     }
-                
-                    .icon-img {
-                        height: 40px;
-                        margin-bottom: 5px;
-                    }
-                
-                    .feature-title {
-                        font-size: 16px;
-                        font-weight: 600;
-                        color: #fff;
-                        margin-top: 10px;
-                    }
-                
-                    .col text-center {
-                        text-align: center;
-                    }
-                
-                    /* Responsive Layout */
-                    @media (max-width: 700px) {
-                        .row-cols-lg-5 {
-                            display: grid;
-                            grid-template-columns: repeat(2, 1fr);
-                        }
-                    }
-                
-                    @media (max-width: 400px) {
-                        .row-cols-lg-5 {
-                            grid-template-columns: 1fr;
-                        }
-                
-                        .feature-title {
-                            font-size: 12px;
-                        }
+                    .video-responsive iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
                     }
                 </style>
+
+                <div class="row justify-content-center align-items-center mt-4">
+                    <h1 class="text-center">บริการของเรา</h1>
+                </div>
+
+                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-1 mt-3 justify-content-center">
+                    <div class="col text-center">
+                        <a>
+                            <img src="design-thinking.png" alt="Icon of employees" class="icon-img">
+                        </a>
+                        <h6 class="feature-title">DESIGN & BUILD MACHINERY</h6>
+                    </div>
+                    <div class="col text-center">
+                        <a>
+                            <img src="build.png" alt="Icon of design-thinking" class="icon-img">
+                        </a>
+                        <h6 class="feature-title">BUILD</h6>
+                    </div>
+                    <div class="col text-center">
+                        <a>
+                            <img src="maintenance.png" alt="Icon of new-product" class="icon-img">
+                        </a>
+                        <h6 class="feature-title">Install</h6>
+                    </div>
+                    <div class="col text-center">
+                        <a>
+                            <img src="warranty.png" alt="Icon of security" class="icon-img">
+                        </a>
+                        <h6 class="feature-title">WARRANTY</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="col-md-6" style="font-size: 14px;">
+                <p class="mb-3">
+                    Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry.
+                </p>
+                <p class="mb-3">
+                    Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems.
+                </p>
+                <p class="mb-3">
+                    The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
+                </p>
+                <ul class="mb-3">
+                    <li><strong>Production Process Efficiency:</strong> The company utilizes automation technology to enhance precision and reduce errors. This includes the implementation of sensor systems that detect hazards, thereby increasing safety in manufacturing.</li>
+                    <li><strong>Energy Efficiency:</strong> We focus on energy-saving solutions to lower costs and protect the environment. Our efforts include implementing renewable energy sources and energy-saving technologies.</li>
+                    <li><strong>Innovation and Development:</strong> We invest in new technologies and innovations that help reduce costs and meet market demands.</li>
+                    <li><strong>Environmental Responsibility:</strong> We are committed to reducing waste and promoting recycling. Our processes minimize waste generation and encourage the use of recyclable materials.</li>
+                </ul>
+                <p class="mb-3">
+                    With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    .row {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .icon-img {
+        height: 40px;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .icon-img:hover {
+        transform: scale(1.1);
+    }
+
+    .feature-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 991px) {
+        .row-cols-lg-5 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 400px) {
+        .row-cols-lg-5 {
+            grid-template-columns: 1fr;
+        }
+
+        .feature-title {
+            font-size: 12px;
+        }
+    }
+</style>
         <!---------------->
 
         <!--- สินค้าและบริการ --->
