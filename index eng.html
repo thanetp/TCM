@@ -135,19 +135,19 @@
         </script>
 </head>
 <body>
-        <!--- ส่วนหัว --->
+       <!--- ส่วนหัว --->
             <div> 
             <div class="header">
                 <div id="header1" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="1.jpg" class="d-block w-100" alt="...">
+                        <img src="img/1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="10000">
-                        <img src="2.jpg" class="d-block w-100" alt="...">
+                        <img src="img/2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="7000">
-                        <img src="3.jpg" class="d-block w-100" alt="...">
+                        <img src="img/3.jpg" class="d-block w-100" alt="...">
                     </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                 </a>
                 <!-- Logo Section -->
                 <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
-                    <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
+                    <img  src="img/tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
                 </a>
                 <!-- Menu Items -->
                 <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
@@ -170,10 +170,10 @@
                         <!-- Language Icons -->
                             <div class="w3-right" style="padding: 20px 10px;">
                                 <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                                    <img src="img/icon/th_th.gif" alt="ไทย" style="height: 25px;">
                                 </a>
                                 <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                    <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
                                 </a>
                             </div>
                             <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -181,10 +181,10 @@
                                 <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
                                 <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
                                 <a href="index.html" class="w3-bar-item w3-button">
-                                    <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                                    <img src="img/icon/th_th.gif" alt="ภาษาไทย" style="height: 25px;">
                                 </a>
                                 <a href="index eng.html" class="w3-bar-item w3-button" >
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                    <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
                                 </a>
                             </div>
                 
@@ -192,143 +192,145 @@
             </div>
         <!------------->
         
-      
+        <!--- แนะนำ --->
+            <div class="container">
+            <div class="row-1">
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a  class="feature-card text-center">
+                  <img src="img/icon/design-thinking.png" alt="Design Research and Development" class="icon-img">
+                  <h4 class="feature-title">Design Research & Development</h4>
+                </a>
+              </div>
+          
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a class="feature-card text-center">
+                  <img src="img/icon/build.png" alt="Build" class="icon-img">
+                  <h4 class="feature-title">Build</h4>
+                </a>
+              </div>
+          
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a class="feature-card text-center">
+                  <img src="img/icon/maintenance.png" alt="Install" class="icon-img">
+                  <h4 class="feature-title">Install</h4>
+                </a>
+              </div>
+          
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a  class="feature-card text-center">
+                  <img src="img/icon/warranty.png" alt="Warranty" class="icon-img">
+                  <h4 class="feature-title">Warranty</h4>
+                </a>
+              </div>
+            </div>
+            </div>
+          
+          <!-- CSS -->
+          <style>
+            .feature-card {
+              display: block;
+              text-decoration: none;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+          
+            .icon-img {
+              height: 75px;
+              margin-bottom: 15px;
+              transition: transform 0.3s ease;
+            }
+          
+            .feature-title {
+              font-size: 18px;
+              font-weight: 600;
+              color: #333;
+              margin-top: 10px;
+              text-align: center;
+            }
+          
+            /* Responsive Layout */
+            @media (max-width: 100px) {
+              .col-lg-3 {
+                flex: 0 0 48%;
+                max-width: 48%;
+              }
+            }
+          
+            @media (max-width: 768px) {
+              .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+              }
+            }
+          
+            @media (max-width: 400px) {
+              .feature-title {
+                font-size: 14px;
+              }
+          
+              .icon-img {
+                height: 60px;
+              }
+            }
+          </style>
+          
+        
+        <!------------->
 
         <!--- เกี่ยวกับเรา --->
         <div>
-    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;">
-
-        <div class="text-center mb-4">
-            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
-                About Us
-            </a>
-        </div>
-
-        <div class="row">
-            <!-- Video Section -->
-            <div class="col-md-6 mb-4">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
+            
+                <div class="text-center mb-4">
+                    <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                        About Us
+                    </a>
                 </div>
-
-                <style>
-                    .video-responsive {
-                        position: relative;
-                        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                        height: 0;
-                        overflow: hidden;
-                    }
-                    .video-responsive iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                    }
-                </style>
-
-
-                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1 mt-3 justify-content-center">
-                    <div class="col text-center">
-                        <a>
-                            <img src="design-thinking.png" class="icon-img">
-                        </a>
-                        <h6 class="feature-title">DESIGN & BUILD MACHINERY</h6>
+    
+                <div class="row">
+                    <div class="col-md-6 mb-4" >
+                        <video controls autoplay muted loop style="width: 100%; height: auto;">
+                            <source src="img/profile.mp4" type="video/mp4">
+                            <source src="img/profile.mp4" type="video/ogg">
+                        </video>
                     </div>
-                    <div class="col text-center">
-                        <a>
-                            <img src="build.png"  class="icon-img">
-                        </a>
-                        <h6 class="feature-title">BUILD</h6>
-                    </div>
-                    <div class="col text-center">
-                        <a>
-                            <img src="maintenance.png"  class="icon-img">
-                        </a>
-                        <h6 class="feature-title">Install</h6>
-                    </div>
-                    <div class="col text-center">
-                        <a>
-                            <img src="warranty.png"  class="icon-img">
-                        </a>
-                        <h6 class="feature-title">WARRANTY</h6>
+    
+                    <!-- Content Section -->
+                    <div class="col-md-6" style="font-size: 13px;" >
+                        <p class="mb-2" >
+                            Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry. Our Manufacturing Solutions offer automated production system designs (Automation & Robotics) for factories equipped with control and communication systems that align with the Industry 4.0 concept.
+                            Our services include conveyor systems, automation systems, electrical control systems and PLCs, factory structures and cranes, automatic robotic arms, and upgrading existing machinery using modern technologies. Our team consists of more than 40 skilled engineers and craftsmen with extensive experience. We continuously develop and improve production processes to meet customer needs.
+                        </p>
+                        
+                        <p class="mb-2">
+                            Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems. We provide consulting services in research, development, design, and construction of machinery for the manufacturing sector, with a clearly defined scope of work that includes research and development, design, production, assembly, installation, testing, and training. Our team consists of highly skilled professionals with extensive experience.
+                        </p>
+                        
+                        <p class="mb-2">
+                            The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
+                        </p>
+                        <ul>
+                            <li>
+                                In the production process, the company utilizes automation technology to enhance precision and reduce errors. This includes the implementation of sensor systems that detect hazards, thereby increasing safety in manufacturing. By integrating these advanced technologies, we ensure not only higher efficiency but also a safer working environment for our team and better outcomes for our clients. This commitment to safety and precision is central to our operations and contributes to overall productivity and reliability in our manufacturing solutions
+                            </li>
+                            <li>
+                                To reduce energy costs, the company focuses on energy efficiency by offering alternative energy solutions that help lower expenses while also protecting the environment. We implement energy-saving technologies and practices in our production processes, promoting the use of renewable energy sources where feasible. This commitment not only contributes to cost savings for our clients but also aligns with our goal of sustainability, ensuring that our operations have a positive impact on both the economy and the environment.
+                            </li>
+                            <li>
+                                In terms of development and innovation, the company invests in new technologies and supports the advancement of innovative solutions that can reduce costs. We also focus on developing new products that meet market demands and enhance value for our customers. This proactive approach allows us to stay competitive and responsive to industry trends, ensuring that our offerings not only improve efficiency but also align with our clients' evolving needs. By fostering a culture of innovation, we aim to deliver cutting-edge solutions that drive growth and sustainability in the manufacturing sector.
+                            </li>
+                            <li>
+                                In terms of environmental responsibility, the company is committed to reducing waste and promoting recycling. We develop production processes that minimize waste generation and encourage the use of recyclable materials. Additionally, we prioritize the selection of sustainable raw materials to mitigate the impact on nature and reduce greenhouse gas emissions. By leveraging technologies that promote clean energy use in our manufacturing processes, we aim to contribute positively to the environment and support a more sustainable future. This commitment reflects our belief that responsible practices can coexist with industrial advancement
+                            </li>
+                        </ul>
+                        <p class="mb-2">
+                            With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible. We believe that by integrating sustainable practices and innovative technologies into our operations, we can create a positive impact not only on our clients but also on society and the planet. Our commitment to excellence, efficiency, and sustainability positions us to lead the way in developing solutions that benefit both industry and the environment, ensuring a better future for all.
+                        </p>
+                        
+
                     </div>
                 </div>
             </div>
-
-            <!-- Content Section -->
-            <div class="col-md-6" style="font-size: 14px;">
-                <p class="mb-3">
-                    Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry.
-                </p>
-                <p class="mb-3">
-                    Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems.
-                </p>
-                <p class="mb-3">
-                    The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
-                </p>
-                <ul class="mb-3">
-                    <li><strong>Production Process Efficiency:</strong> The company utilizes automation technology to enhance precision and reduce errors. This includes the implementation of sensor systems that detect hazards, thereby increasing safety in manufacturing.</li>
-                    <li><strong>Energy Efficiency:</strong> We focus on energy-saving solutions to lower costs and protect the environment. Our efforts include implementing renewable energy sources and energy-saving technologies.</li>
-                    <li><strong>Innovation and Development:</strong> We invest in new technologies and innovations that help reduce costs and meet market demands.</li>
-                    <li><strong>Environmental Responsibility:</strong> We are committed to reducing waste and promoting recycling. Our processes minimize waste generation and encourage the use of recyclable materials.</li>
-                </ul>
-                <p class="mb-3">
-                    With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible.
-                </p>
-            </div>
         </div>
-    </div>
-</div>
-
-<!-- CSS -->
-<style>
-    .row {
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .icon-img {
-        height: 80px;
-        margin-bottom: 5px;
-        transition: transform 0.3s ease;
-    }
-
-    .icon-img:hover {
-        transform: scale(1.1);
-    }
-
-    .feature-title {
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        margin-top: 10px;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    /* Responsive Layout */
-    @media (max-width: 991px) {
-        .row-cols-lg-5 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 400px) {
-        .row-cols-lg-5 {
-            grid-template-columns: 1fr;
-        }
-
-        .feature-title {
-            font-size: 12px;
-        }
-    }
-</style>
-        <!---------------->
 
         <!--- สินค้าและบริการ --->
         <div>
