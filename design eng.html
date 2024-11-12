@@ -193,117 +193,97 @@
         <!------------->
         
         <!--- แนะนำ --->
-        <div>
-            <div class="row  row-cols-lg-5">
-                <style>
-                    .row {
-              
-              justify-content: center; /* จัดคอนเทนต์ให้ตรงกลางในแนวนอน */
-              margin: 0 auto; /* จัดให้มีระยะห่างซ้ายขวาอัตโนมัติ */
-          }
-          .icon-img {
-              height: 50px; /* ปรับความสูงของไอคอน */
-              margin-bottom: 5px;
-          }
-      
-          .feature-title {
-              font-size: 20px; /* ขนาดฟอนต์สำหรับหัวข้อ */
-              margin-bottom: 10px;
-              color: #333;
-          }
-      
-          .feature-description {
-              font-size: 15px; /* ขนาดฟอนต์สำหรับคำอธิบาย */
-              margin-bottom: 10px;
-              color: #555;
-          }
-      
-          .row-cols-lg-5 {
-              width: 100%; /* กำหนดให้ความกว้างเท่ากับ .navbar */
-              box-sizing: border-box; /* คำนวณขนาดรวมกับ padding และ border */
-          }
-      
-          .row-cols-lg-5 .col {
-              text-align: center;
-              border: 2px solid #ddd;
-              background-color: #ffffff;
-              padding: 10px; /* เพิ่มการ padding เพื่อให้มีพื้นที่มากขึ้น */
-              transition: background-color 0.3s, box-shadow 0.3s;
-              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-              margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างบล็อก */
-          }
-      
-          .row-cols-lg-5 .col:hover {
-              background-color: #f0f8ff;
-              box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-              transform: translateY(-2px);
-          }
-      
-          @media (max-width: 700px) {
-              .row-cols-lg-5 {
-                  display: grid; /* ใช้ grid เพื่อควบคุมคอลัมน์ */
-                  grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์บนหน้าจอเล็ก */
-              }
-          }
-      
-          @media (max-width: 400px) {
-              .row-cols-lg-5 {
-                  grid-template-columns: 1fr; /* แสดง 1 คอลัมน์บนหน้าจอเล็กที่สุด */
-              }
-      
-              .feature-title {
-                  font-size: 18px; /* ขนาดฟอนต์เล็กลง */
-              }
-      
-              .feature-description {
-                  font-size: 14px; /* ขนาดฟอนต์เล็กลง */
-              }
-      
-              
-          }
-                </style>
-                
-                <div class="col">
-                    <a>
-                        <img src="employees.png" alt="Icon of employees" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">About Us</h4>
-                    <p class="feature-description">We have a team that specializes in designing and building machines.</p>
-                </div>
-        
-                <div class="col">
-                    <a>
-                        <img src="design-thinking.png" alt="Icon of design-thinking" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">DESIGN & BUILD MACHINERY</h4>
-                    <p class="feature-description">We focus on designing, creating, and developing specialized machines that cannot be purchased elsewhere, responding to specific customer needs.</p>
-                </div>
-        
-                <div class="col">
-                    <a>
-                        <img src="new-product.png" alt="Icon of new-product" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">PRODUCT</h4>
-                    <p class="feature-description">We create unique custom machinery that meets specific customer needs, enhancing operational efficiency across all sectors.</p>
-                </div>
-        
-                <div class="col">
-                    <a>
-                        <img src="security.png" alt="Icon of security" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">WARRANTY</h4>
-                    <p class="feature-description">Our machinery is built to meet recognized quality standards, backed by a full one-year warranty that includes complimentary parts and labor service.</p>
-                </div>
-        
-                <div class="col">
-                    <a>
-                        <img src="service.png" alt="Icon of service" class="icon-img">
-                    </a>
-                    <h4 class="feature-title">QUALITY ASSURANCE</h4>
-                    <p class="feature-description">We operate under a quality management system that covers every step, from designing and producing to delivering machines, according to ISO 9001:2015 standards.</p>
-                </div>
-            </div>
+        <div class="container">
+    <div class="row">
+        <!-- Feature Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="design-thinking.png" alt="Design Research and Development" class="icon-img">
+                <h4 class="feature-title">Design Research & Development</h4>
+            </a>
         </div>
+
+        <!-- Feature Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="build.png" alt="Build" class="icon-img">
+                <h4 class="feature-title">Build</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="maintenance.png" alt="Install" class="icon-img">
+                <h4 class="feature-title">Install</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="warranty.png" alt="Warranty" class="icon-img">
+                <h4 class="feature-title">Warranty</h4>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    .feature-card {
+        display: block;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-img {
+        height: 75px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+        .col-lg-3 {
+            flex: 0 0 50%;  /* 2 items per row */
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 100%;  /* 1 item per row */
+            max-width: 100%;
+        }
+        
+        .icon-img {
+            height: 60px; /* Slightly smaller icons on mobile */
+        }
+
+        .feature-title {
+            font-size: 16px;  /* Slightly smaller text */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .icon-img {
+            height: 50px; /* Even smaller icons on very small screens */
+        }
+
+        .feature-title {
+            font-size: 14px;  /* Even smaller text */
+        }
+    }
+</style>
         
         
         <!------------->
