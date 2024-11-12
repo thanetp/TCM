@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCM1989</title>
+    <link rel="icon" href="tcm_logo1.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            
+        .navbar {
+        overflow: hidden;
+        background-color: #ffffff;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 10; 
+      }
+      
+      /* Style the navigation bar links */
+      .navbar a {
+        float: left;
+        display: block;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-decoration: none;
+      }
+      
+      
+      /* Right-aligned link */
+      .navbar a.right {
+        float: right;
+      }
+      
+      /* Change color on hover */
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      /* Active/current link */
+      .navbar a.active {
+        background-color: #666;
+        color: white;
+      }
+      
+  
+      
+      /* Create two unequal columns that sits next to each other */
+      /* Sidebar/left column */
+      .side {
+        -ms-flex: 30%; /* IE10 */
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 5px;
+      }
+      
+      /* Main column */
+      .main {   
+        -ms-flex: 70%; /* IE10 */
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+      
+      /* Fake image, just for this example */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ffffff;
+      }
+      
+      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 700px) {
+        .row {   
+          flex-direction: column;
+        }
+      }
+      
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .navbar a {
+          float: none;
+          width: 100%;
+        }
+      }
+        </style>
+        <script>
+            
+            // Modal Image Gallery
+            function onClick(element) {
+            document.getElementById("img").src = element.src;
+            document.getElementById("modal").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+            }
+            
+            // Change style of navbar on scroll
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var navbar = document.getElementById("myNavbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                }
+            }
+            
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function toggleFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+</head>
+<body>
+       <!--- ส่วนหัว --->
+            <div> 
+            <div class="header">
+                <div id="header1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="navbar" >
+                <div class="w3-bar w3-padding-16" id="myNavbar" >
+                <!-- Hamburger Icon for Small Screens -->
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- Logo Section -->
+                <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
+                    <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
+                </a>
+                <!-- Menu Items -->
+                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
+                        <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
+                        <a href="index eng.html#item-1-4" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
+                        <!-- Language Icons -->
+                            <div class="w3-right" style="padding: 20px 10px;">
+                                <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                    <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                                </a>
+                                <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                </a>
+                            </div>
+                            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+                                <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
+                                <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
+                                <a href="index.html" class="w3-bar-item w3-button">
+                                    <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                                </a>
+                                <a href="index eng.html" class="w3-bar-item w3-button" >
+                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                </a>
+                            </div>
+                
+                </div>
+            </div>
+        <!------------->
+        
+        <!--- แนะนำ --->
+             <div class="container">
+    <div class="row">
+        <!-- Feature Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="design-thinking.png" alt="Design Research and Development" class="icon-img">
+                <h4 class="feature-title">Design Research & Development</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="build.png" alt="Build" class="icon-img">
+                <h4 class="feature-title">Build</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="maintenance.png" alt="Install" class="icon-img">
+                <h4 class="feature-title">Install</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="warranty.png" alt="Warranty" class="icon-img">
+                <h4 class="feature-title">Warranty</h4>
+            </a>
+        </div>
+    </div>
+</div>
+        <style>
+    .feature-card {
+        display: block;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-img {
+        height: 75px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+        .col-lg-3 {
+            flex: 0 0 50%;  /* 2 items per row */
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 100%;  /* 1 item per row */
+            max-width: 100%;
+        }
+        
+        .icon-img {
+            height: 60px; /* Slightly smaller icons on mobile */
+        }
+
+        .feature-title {
+            font-size: 16px;  /* Slightly smaller text */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .icon-img {
+            height: 50px; /* Even smaller icons on very small screens */
+        }
+
+        .feature-title {
+            font-size: 14px;  /* Even smaller text */
+        }
+    }
+</style>
+
+          
+        
+        <!------------->
+
+        <!--- เกี่ยวกับเรา --->
+        <div>
+            <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
+            
+                <div class="text-center mb-4">
+                    <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                        About Us
+                    </a>
+                </div>
+    
+                <div class="row">
+                    <div class="col-md-6 mb-4" >
+                        <div class="video-responsive">
+                         <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                      <style>
+                          .video-responsive {
+                              position: relative;
+                              padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                              height: 0;
+                              overflow: hidden;
+                          }
+                          .video-responsive iframe {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%; /* แก้ไขเป็น 100% */
+                              height: 100%;
+                          }
+                      </style>
+                    </div>
+    
+                    <!-- Content Section -->
+                     <div class="col-md-6" style="font-size: 14px;">
+                    <p class="mb-3">
+                        Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry. Our Manufacturing Solutions offer automated production system designs (Automation & Robotics) for factories equipped with control and communication systems that align with the Industry 4.0 concept.
+                    </p>
+        
+                    <p class="mb-3">
+                        Our services include conveyor systems, automation systems, electrical control systems and PLCs, factory structures and cranes, automatic robotic arms, and upgrading existing machinery using modern technologies. Our team consists of more than 40 skilled engineers and craftsmen with extensive experience. We continuously develop and improve production processes to meet customer needs.
+                    </p>
+        
+                    <p class="mb-3">
+                        Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems. We provide consulting services in research, development, design, and construction of machinery for the manufacturing sector, with a clearly defined scope of work that includes research and development, design, production, assembly, installation, testing, and training.
+                    </p>
+        
+                    <p class="mb-3">
+                        The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
+                    </p>
+        
+                    <ul class="mb-3">
+                        <li>
+                            <strong>In the production process:</strong>
+                            We utilize automation technology to enhance precision and
+                            minimize errors, including hazard detection sensor systems to improve production
+                            safety
+                        </li>
+                        <li>
+                            <strong>Energy Cost Reduction:</strong>
+                            Our emphasis is on efficient energy use, offering alternative
+                            energy solutions that reduce costs while preserving the environment.
+                        </li>
+                        <li>
+                            <strong>Development and Innovation:</strong>
+                            We invest in innovation and support the development
+                            of new technologies that can lower costs, as well as developing new products that
+                            meet market demands and add value for customers.
+                        </li>
+                        <li>
+                            <strong>Environmental Responsibility:</strong>
+                            We are committed to waste reduction and recycling by
+                            developing production processes that minimize waste generation and promote the
+                            use of recyclable materials. We also prioritize sustainable raw materials to reduce
+                            environmental impact and greenhouse gas emissions, utilizing clean energy
+                            technologies in our production.
+                        </li>
+                    </ul>
+        
+                    <p class="mb-3">
+                        With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible. Our commitment to excellence, efficiency, and sustainability positions us to lead the way in developing solutions that benefit both industry and the environment, ensuring a better future for all.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       <!--- สินค้าและบริการ --->
+
+        <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
+        
+            <div class="text-center mb-4" >
+                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-2-2">
+                    Products and Services
+                </a>
+            </div>
+
+            <div class="row">
+                <style>
+                    /* ทำให้ปุ่มอยู่กลาง */
+                    .filter-buttons {
+                    display: flex;
+                    justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
+                    flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
+                    gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+                    margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
+                }
+        
+                /* ปรับแต่งสไตล์ของปุ่ม */
+                .btn {
+                    border: none;
+                    outline: none;
+                    padding: 12px 20px;
+                    background-color: #f1f1f1;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    text-align: center;
+                    transition: background-color 0.3s ease;
+                }
+        
+                /* เปลี่ยนสีเมื่อ hover */
+                .btn:hover {
+                    background-color: #6f6d6d;
+                }
+        
+                /* กล่องแสดงผลภาพ */
+                .filterDiv {
+                    background-color: rgb(52, 52, 52);
+                    color: #ffffff;
+                    width: 100%;
+                    border-radius: 8px;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s ease;
+                }
+        
+                /* แสดงกล่องเมื่อมีการกรอง */
+                .show {
+                    display: block;
+                }
+        
+                .filterDiv img {
+                    width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
+                    height: 300px; /* กำหนดความสูงที่คงที่ */
+                    object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
+                    border-radius: 5px; /* ขอบโค้ง */
+                    margin-bottom: 5px; /* ช่องว่างด้านล่าง */
+                }
+
+        
+                /* ตั้งค่าผลลัพธ์ให้จัดเรียงเป็นกริด */
+                .container1 {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
+                    gap: 15px;
+                }
+        
+                /* ตั้งค่าการแสดงผลบนมือถือ */
+                @media (max-width: 768px) {
+                    .container {
+                        grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์สำหรับแท็บเล็ต */
+                    }
+                }
+        
+                @media (max-width: 480px) {
+                    .container {
+                        grid-template-columns: 1fr; /* 1 คอลัมน์สำหรับมือถือ */
+                    }
+        
+                    .filter-buttons {
+                        flex-direction: column; /* จัดปุ่มในแนวตั้ง */
+                    }
+        
+                    .btn {
+                        width: 100%; /* ปรับให้ปุ่มเต็มความกว้าง */
+                    }
+                }
+                
+                /* Modal */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    padding-top: 100px;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+        
+                .modal-content {
+                    margin: auto;
+                    display: block;
+                    max-width: 80%;
+                    max-height: 80%;
+                    border-radius: 5px;
+                }
+        
+                
+        
+                .close:focus {
+                    color: #999;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+        
+                #caption {
+                    text-align: center;
+                    color: #ccc;
+                    padding: 10px;
+                }
+                            /* ปุ่มปิดภายใน Modal */
+                .btn-close-modal {
+                    position: absolute;
+                    bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
+                    left: 50%; /* จัดตำแหน่งกลาง */
+                    transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
+                    background-color: #f1f1f1;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    transition: background-color 0.3s ease;
+                }
+
+                .btn-close-modal:hover {
+                    background-color: #6f6d6d;
+                    color: white;
+                }
+                </style>
+                <div class="filter-buttons">
+                    <button class="btn" onclick="filterSelection('all')">Show All</button>
+                    <button class="btn" onclick="filterSelection('auto')">Automation</button>
+                    <button class="btn" onclick="filterSelection('design')">Design The Whole System</button>
+                    <button class="btn" onclick="filterSelection('conveyor')">Conveyor System</button>
+                    <button class="btn" onclick="filterSelection('custom')">Custom-made machines</button>
+                    <button class="btn" onclick="filterSelection('Electrical')">Electrical & PLC Program</button>
+                    <button class="btn" onclick="filterSelection('standard')">Standard Parts & Accessories</button>
+                </div>
+            
+                <div class="container1">
+                    <div class="filterDiv auto">
+                        <img src="a1.jpg">
+                    </div>
+                    <div class="filterDiv design">
+                        <img src="a2.jpg">
+                    </div>
+                    <div class="filterDiv conveyor">
+                        <img src="a3.jpg">
+                    </div>
+                    <div class="filterDiv custom">
+                        <img src="a4.jpg">
+                    </div>
+                    <div class="filterDiv Electrical">
+                        <img src="d1.jpg">
+                    </div>
+                    <div class="filterDiv standard">
+                        <img src="d2.jpg">
+                    </div>
+                    <div class="filterDiv standard">
+                        <img src="e1.jpg">
+                    </div>
+                    <div class="filterDiv Electrical">
+                        <img src="e4.jpg">
+                    </div>
+                    <div class="filterDiv conveyor">
+                        <img src="a1.jpg">
+                    </div>
+                    <div class="filterDiv auto">
+                        <img src="a2.jpg">
+                    </div>
+                    <div class="filterDiv design">
+                        <img src="a3.jpg">
+                    </div>
+                    <div class="filterDiv design">
+                        <img src="a4.JPG">
+                    </div>
+                    <div class="filterDiv auto">
+                        <img src="d2.jpg">
+                    </div>
+                </div>
+            
+                <div id="myModal" class="modal">
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                    <!-- ปุ่มปิดภายใน modal -->
+                    <button class="btn-close-modal">Close</button>
+                </div>
+            
+                <script>
+                    filterSelection("all")
+                    function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName("filterDiv");
+                        if (c == "all") c = "";
+                        for (i = 0; i < x.length; i++) {
+                            w3RemoveClass(x[i], "show");
+                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                        }
+                    }
+                    
+                    function w3AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                        }
+                    }
+            
+                    function w3RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                            }
+                        }
+                        element.className = arr1.join(" ");
+                    }
+            
+                    // การเปิด modal เมื่อคลิกที่ภาพ
+                        var modal = document.getElementById("myModal");
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+
+                        var images = document.querySelectorAll(".filterDiv img");
+
+                        images.forEach(function(img) {
+                        img.onclick = function() {
+                            modal.style.display = "block"; // เปิด modal
+                            modalImg.src = this.src; // กำหนดแหล่งที่มาของภาพใน modal
+                            captionText.innerHTML = this.alt; // ถ้ามีคำบรรยายใต้ภาพ (ใช้ alt)
+                        };
+                        });
+
+                        // การปิด modal เมื่อคลิกที่ปุ่ม "X" หรือปุ่ม "Close"
+                        var closeButton = document.getElementsByClassName("btn-close-modal")[0]; // ปุ่ม "Close"
+
+                        // ปิด modal เมื่อคลิกที่ปุ่ม "Close"
+                        closeButton.onclick = function() {
+                        modal.style.display = "none";
+                        };
+                </script>
+
+            </div>
+            
+        </div>
+
+<!--------------->
+        <!--- ส่วนเคดิต --->
+        <div>
+            <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
+                        © 2024 Your Company. All Rights Reserved.
+                    </span>
+                    <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
+                        Designed By Thanet.P
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--------------->
+
+
+</body>
+</html>
