@@ -193,84 +193,115 @@
 
 <!--- แนะนำ --->
        <div class="container">
-            <div class="row-1">
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <a  class="feature-card text-center">
-                  <img src="design-thinking.png" alt="Design Research and Development" class="icon-img">
-                  <h4 class="feature-title">Design Research & Development</h4>
-                </a>
-              </div>
-          
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <a class="feature-card text-center">
-                  <img src="build.png" alt="Build" class="icon-img">
-                  <h4 class="feature-title">Build</h4>
-                </a>
-              </div>
-          
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <a class="feature-card text-center">
-                  <img src="maintenance.png" alt="Install" class="icon-img">
-                  <h4 class="feature-title">Install</h4>
-                </a>
-              </div>
-          
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <a  class="feature-card text-center">
-                  <img src="warranty.png" alt="Warranty" class="icon-img">
-                  <h4 class="feature-title">Warranty</h4>
-                </a>
-              </div>
-            </div>
-            </div>
-          
-          <!-- CSS -->
-          <style>
-            .feature-card {
-              display: block;
-              text-decoration: none;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-          
-            .icon-img {
-              height: 75px;
-              margin-bottom: 15px;
-              transition: transform 0.3s ease;
-            }
-          
-            .feature-title {
-              font-size: 18px;
-              font-weight: 600;
-              color: #333;
-              margin-top: 10px;
-              text-align: center;
-            }
-          
-            /* Responsive Layout */
-            @media (max-width: 100px) {
-              .col-lg-3 {
-                flex: 0 0 48%;
-                max-width: 48%;
-              }
-            }
-          
-            @media (max-width: 768px) {
-              .col-md-6 {
-                flex: 0 0 100%;
-                max-width: 100%;
-              }
-            }
-          
-            @media (max-width: 400px) {
-              .feature-title {
-                font-size: 14px;
-              }
-          
-              .icon-img {
-                height: 60px;
-              }
-            }
-          </style>
+    <div class="row">
+        <!-- Feature Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="design-thinking.png" alt="Design Research and Development" class="icon-img">
+                <h4 class="feature-title">Design Research & Development</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="build.png" alt="Build" class="icon-img">
+                <h4 class="feature-title">Build</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="maintenance.png" alt="Install" class="icon-img">
+                <h4 class="feature-title">Install</h4>
+            </a>
+        </div>
+
+        <!-- Feature Card 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <a class="feature-card text-center">
+                <img src="warranty.png" alt="Warranty" class="icon-img">
+                <h4 class="feature-title">Warranty</h4>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    .feature-card {
+        display: block;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-img {
+        height: 75px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        max-width: 100%;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Hover effect */
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 1200px) {
+        .col-lg-3 {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .col-md-6 {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .col-sm-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .feature-title {
+            font-size: 16px;
+        }
+
+        .icon-img {
+            height: 65px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .feature-title {
+            font-size: 14px;
+        }
+
+        .icon-img {
+            height: 60px;
+        }
+    }
+</style>
+
 <!------------->
 
 <!--- เกี่ยวกับเรา --->
