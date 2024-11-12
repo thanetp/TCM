@@ -300,142 +300,67 @@
             </div>
 
             <div class="row">
-                <style>
-                    /* ทำให้ปุ่มอยู่กลาง */
-                    .filter-buttons {
-                    display: flex;
-                    justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
-                    flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
-                    gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
-                    margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
-                }
-        
-                /* ปรับแต่งสไตล์ของปุ่ม */
-                .btn {
-                    border: none;
-                    outline: none;
-                    padding: 12px 20px;
-                    background-color: #f1f1f1;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    text-align: center;
-                    transition: background-color 0.3s ease;
-                }
-        
-                /* เปลี่ยนสีเมื่อ hover */
-                .btn:hover {
-                    background-color: #6f6d6d;
-                }
-        
-                /* กล่องแสดงผลภาพ */
-                .filterDiv {
-                    background-color: rgb(52, 52, 52);
-                    color: #ffffff;
-                    width: 100%;
-                    border-radius: 8px;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    transition: all 0.3s ease;
-                }
-        
-                /* แสดงกล่องเมื่อมีการกรอง */
-                .show {
-                    display: block;
-                }
-        
-                .filterDiv img {
-                    width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
-                    height: 300px; /* กำหนดความสูงที่คงที่ */
-                    object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
-                    border-radius: 5px; /* ขอบโค้ง */
-                    margin-bottom: 5px; /* ช่องว่างด้านล่าง */
-                }
+              <style>
+    /* Center the filter buttons and make it responsive */
+    .filter-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
-        
-                /* ตั้งค่าผลลัพธ์ให้จัดเรียงเป็นกริด */
-                .container1 {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-                    gap: 15px;
-                }
-        
-                /* ตั้งค่าการแสดงผลบนมือถือ */
-                @media (max-width: 768px) {
-                    .container {
-                        grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์สำหรับแท็บเล็ต */
-                    }
-                }
-        
-                @media (max-width: 480px) {
-                    .container {
-                        grid-template-columns: 1fr; /* 1 คอลัมน์สำหรับมือถือ */
-                    }
-        
-                    .filter-buttons {
-                        flex-direction: column; /* จัดปุ่มในแนวตั้ง */
-                    }
-        
-                    .btn {
-                        width: 100%; /* ปรับให้ปุ่มเต็มความกว้าง */
-                    }
-                }
-                
-                /* Modal */
-                .modal {
-                    display: none;
-                    position: fixed;
-                    z-index: 1;
-                    padding-top: 100px;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: auto;
-                    background-color: rgba(0, 0, 0, 0.8);
-                }
-        
-                .modal-content {
-                    margin: auto;
-                    display: block;
-                    max-width: 80%;
-                    max-height: 80%;
-                    border-radius: 5px;
-                }
-        
-                
-        
-                .close:focus {
-                    color: #999;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-        
-                #caption {
-                    text-align: center;
-                    color: #ccc;
-                    padding: 10px;
-                }
-                            /* ปุ่มปิดภายใน Modal */
-                .btn-close-modal {
-                    position: absolute;
-                    bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
-                    left: 50%; /* จัดตำแหน่งกลาง */
-                    transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
-                    background-color: #f1f1f1;
-                    border: none;
-                    padding: 10px 20px;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    transition: background-color 0.3s ease;
-                }
+    /* Style the filter button container (ul) */
+    .filter-buttons ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-                .btn-close-modal:hover {
-                    background-color: #6f6d6d;
-                    color: white;
-                }
-                </style>
+    /* Style the filter buttons (li > a) */
+    .filter-buttons .nav-item {
+        margin: 5px;
+    }
+
+    .filter-buttons .nav-link {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #f1f1f1;
+        color: #333;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Change background color on hover */
+    .filter-buttons .nav-link:hover,
+    .filter-buttons .nav-link.active {
+        background-color: #6f6d6d;
+        color: white;
+        transform: translateY(-2px); /* Slight hover lift */
+    }
+
+    /* Responsive styling for small screens */
+    @media (max-width: 768px) {
+        .filter-buttons ul {
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+        }
+
+        .filter-buttons .nav-link {
+            width: 100%; /* Make buttons full-width on smaller screens */
+            text-align: center;
+            padding: 15px 0;
+        }
+    }
+</style>
 
                
                 
