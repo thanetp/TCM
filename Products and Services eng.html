@@ -325,15 +325,18 @@
                             color: black;
                         }
                 
+                         /* สไตล์สำหรับโทรศัพท์ (Mobile) */
                         @media screen and (max-width: 768px) {
                             .topnav {
-                                /* ไม่จำเป็นต้องเปลี่ยน flex-direction สำหรับมือถือ */
-                                justify-content: center; /* ยังให้เมนูอยู่ตรงกลาง */
+                                flex-direction: column;
+                                align-items: stretch;
                             }
-
+                
                             .topnav a {
-                                padding: 14px 20px; /* ปรับให้เท่ากับคอม */
-                                font-size: 10px; /* ปรับขนาดฟอนต์ให้เหมาะสม */
+                                text-align: left;
+                                padding: 12px;
+                                font-size: 16px;
+                                border-bottom: 1px solid #ddd;
                             }
                         }
                 
