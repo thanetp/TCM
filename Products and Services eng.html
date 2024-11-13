@@ -1,145 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCM1989</title>
-    <link rel="icon" href="tcm_logo1.gif">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            
-        .navbar {
-        overflow: hidden;
-        background-color: #ffffff;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 10; 
-      }
-      
-      /* Style the navigation bar links */
-      .navbar a {
-        float: left;
-        display: block;
-        color: rgb(0, 0, 0);
-        text-align: center;
-        text-decoration: none;
-      }
-      
-      
-      /* Right-aligned link */
-      .navbar a.right {
-        float: right;
-      }
-      
-      /* Change color on hover */
-      .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      /* Active/current link */
-      .navbar a.active {
-        background-color: #666;
-        color: white;
-      }
-      
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCM1989</title>
+  <link rel="icon" href="tcm_logo1.gif">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>   
+    .navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1; 
+  }
   
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Active/current link */
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+  
+
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 5px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+    </style>
+    <script>
       
-      /* Create two unequal columns that sits next to each other */
-      /* Sidebar/left column */
-      .side {
-        -ms-flex: 30%; /* IE10 */
-        flex: 30%;
-        background-color: #f1f1f1;
-        padding: 5px;
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img").src = element.src;
+        document.getElementById("modal").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
       }
       
-      /* Main column */
-      .main {   
-        -ms-flex: 70%; /* IE10 */
-        flex: 70%;
-        background-color: white;
-        padding: 20px;
+      // Change style of navbar on scroll
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+          } else {
+              navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+          }
       }
       
-      /* Fake image, just for this example */
-      .fakeimg {
-        background-color: #aaa;
-        width: 100%;
-        padding: 20px;
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+          } else {
+              x.className = x.className.replace(" w3-show", "");
+          }
       }
-      
-      /* Footer */
-      .footer {
-        padding: 20px;
-        text-align: center;
-        background: #ffffff;
-      }
-      
-      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 700px) {
-        .row {   
-          flex-direction: column;
-        }
-      }
-      
-      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-      @media screen and (max-width: 400px) {
-        .navbar a {
-          float: none;
-          width: 100%;
-        }
-      }
-        </style>
-        <script>
-            
-            // Modal Image Gallery
-            function onClick(element) {
-            document.getElementById("img").src = element.src;
-            document.getElementById("modal").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-            }
-            
-            // Change style of navbar on scroll
-            window.onscroll = function() {myFunction()};
-            function myFunction() {
-                var navbar = document.getElementById("myNavbar");
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-                } else {
-                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-                }
-            }
-            
-            // Used to toggle the menu on small screens when clicking on the menu button
-            function toggleFunction() {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-        </script>
+    </script>
 </head>
 <body>
-       <!--- ส่วนหัว --->
-            <div> 
-            <div class="header">
-                <div id="header1" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+<!--- ส่วนหัว --->
+
+    <div> 
+        <div class="header">
+            <div id="header1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src="1.jpg" class="d-block w-100" alt="...">
                     </div>
@@ -149,341 +150,346 @@
                     <div class="carousel-item" data-bs-interval="7000">
                         <img src="3.jpg" class="d-block w-100" alt="...">
                     </div>
-                    </div>
                 </div>
             </div>
-            </div>
-            <div class="navbar" >
-                <div class="w3-bar w3-padding-16" id="myNavbar" >
-                <!-- Hamburger Icon for Small Screens -->
-                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <!-- Logo Section -->
-                <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
-                    <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
-                </a>
-                <!-- Menu Items -->
+        </div>
+    </div>
+    <div class="navbar" >
+        <div class="w3-bar w3-padding-16" id="myNavbar" >
+        <!-- Hamburger Icon for Small Screens -->
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+        <!-- Logo Section -->
+            <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
+                <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
+            </a>
+        <!-- Menu Items -->
                 <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
-                        <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
-                        <a href="index eng.html#item-1-4" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
-                        <!-- Language Icons -->
-                            <div class="w3-right" style="padding: 20px 10px;">
-                                <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="th_th.gif" alt="ไทย" style="height: 25px;">
-                                </a>
-                                <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
-                                </a>
-                            </div>
-                            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
-                                <a href="Products and Services eng.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
-                                <a href="index eng.html#item-1-4" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
-                                <a href="index.html" class="w3-bar-item w3-button">
-                                    <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
-                                </a>
-                                <a href="index eng.html" class="w3-bar-item w3-button" >
-                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
-                                </a>
-                            </div>
-                
-                </div>
-            </div>
-        <!------------->
- 
-
-       <!--- สินค้าและบริการ --->
-
-        <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
+                <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
+                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
+                    <!-- Language Icons -->
+                        <div class="w3-right" style="padding: 20px 10px;">
+                            <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                            </a>
+                            <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="en_gb.gif" alt="English" style="height: 25px;">
+                            </a>
+                        </div>
+                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                            <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+                            <a href="Products and Services eng.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
+                            <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
+                            <a href="index.html" class="w3-bar-item w3-button">
+                                <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                    </a>
+                    <a href="index eng.html" class="w3-bar-item w3-button" >
+                            <img src="en_gb.gif" alt="English" style="height: 25px;">
+                    </a>
+                    </div>
         
+        </div>
+    </div>
+<!------------->
+
+
+
+  
+
+<!--- สินค้าและบริการ --->
+
+    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
+        
+            
             <div class="text-center mb-4" >
-                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-2-2">
+                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white">
                     Products and Services
                 </a>
             </div>
 
-           <div>
-                       <style>
-                    /* เมนูหลัก */
-                    .topnav {
-                        background-color: #333;
-                        overflow: hidden;
-                        display: flex;
-                        justify-content: flex-end; /* ให้เมนูอยู่ทางขวา */
-                        padding: 10px 20px;
-                        border-radius: 8px; /* มุมมน */
-                    }
-
-                    .topnav a {
-                        text-align: center;
-                        padding: 14px 25px;
-                        text-decoration: none;
-                        font-size: 16px;
-                        color: white;
-                        border-bottom: 3px solid transparent;
-                        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-                        font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
-                        text-transform: uppercase; /* ข้อความตัวพิมพ์ใหญ่ */
-                        letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-                    }
-
-                    /* เมื่อ hover เมนู */
-                    .topnav a:hover {
-                        background-color: #575757; /* เปลี่ยนพื้นหลังเมื่อ hover */
-                        border-color: #f1f1f1; /* เปลี่ยนขอบล่าง */
-                        transform: translateY(-2px); /* เพิ่มเอฟเฟกต์ยกเมนูขึ้นเมื่อ hover */
-                    }
-
-                    /* เมนูเมื่อคลิก */
-                    .topnav a:active {
-                        background-color: #444;
-                        transform: translateY(0); /* เมื่อคลิกจะไม่ยกขึ้น */
-                    }
-
-                    /* สไตล์สำหรับโทรศัพท์ (Mobile) */
-                    @media screen and (max-width: 768px) {
+            <div>
+                    <style>
+                        /* เมนูหลัก */
                         .topnav {
-                            justify-content: center;
-                            flex-wrap: wrap; /* เมนูจะขยับลงมาเมื่อจอเล็ก */
+                            background-color: #333;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: flex-end; /* ให้เมนูอยู่ทางขวา */
+                            padding: 10px 20px;
+                            border-radius: 8px; /* มุมมน */
                         }
 
                         .topnav a {
-                            text-align: left;
-                            padding: 8px 15px;
-                            font-size: 12px;
-                            width: 100%; /* ทำให้เมนูเต็มความกว้างหน้าจอ */
-                            border-bottom: 1px solid #444;
+                            text-align: center;
+                            padding: 14px 25px;
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: white;
+                            border-bottom: 3px solid transparent;
+                            transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+                            font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
+                            text-transform: uppercase; /* ข้อความตัวพิมพ์ใหญ่ */
+                            letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+                        }
+
+                        /* เมื่อ hover เมนู */
+                        .topnav a:hover {
+                            background-color: #575757; /* เปลี่ยนพื้นหลังเมื่อ hover */
+                            border-color: #f1f1f1; /* เปลี่ยนขอบล่าง */
+                            transform: translateY(-2px); /* เพิ่มเอฟเฟกต์ยกเมนูขึ้นเมื่อ hover */
+                        }
+
+                        /* เมนูเมื่อคลิก */
+                        .topnav a:active {
+                            background-color: #444;
+                            transform: translateY(0); /* เมื่อคลิกจะไม่ยกขึ้น */
+                        }
+
+                        /* สไตล์สำหรับโทรศัพท์ (Mobile) */
+                        @media screen and (max-width: 768px) {
+                            .topnav {
+                                justify-content: center;
+                                flex-wrap: wrap; /* เมนูจะขยับลงมาเมื่อจอเล็ก */
+                            }
+
+                            .topnav a {
+                                text-align: left;
+                                padding: 8px 15px;
+                                font-size: 12px;
+                                width: 100%; /* ทำให้เมนูเต็มความกว้างหน้าจอ */
+                                border-bottom: 1px solid #444;
+                            }
+                        }
+
+                        /* สไตล์สำหรับเมื่อใช้แท็บเล็ตหรือจอใหญ่ */
+                        @media screen and (min-width: 768px) {
+                            .topnav {
+                                justify-content: space-between;
+                            }
+                        }
+
+
+                        .filter-buttons {
+                            display: flex;
+                            justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
+                            flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
+                            gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+                            margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
+                        }
+                
+                        
+                
+                        /* กล่องแสดงผลภาพ */
+                        .filterDiv {
+                            background-color: rgb(52, 52, 52);
+                            color: #ffffff;
+                            width: 100%;
+                            border-radius: 8px;
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            transition: all 0.3s ease;
+                        }
+                
+                        /* แสดงกล่องเมื่อมีการกรอง */
+                        .show {
+                            display: block;
+                        }
+                
+                        .filterDiv img {
+                            width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
+                            height: 300px; /* กำหนดความสูงที่คงที่ */
+                            object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
+                            border-radius: 5px; /* ขอบโค้ง */
+                            margin-bottom: 5px; /* ช่องว่างด้านล่าง */
+                        }
+
+                        .container1 {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
+                            gap: 15px;
+                        }
+
+                        .modal {
+                            display: none;
+                            position: fixed;
+                            z-index: 1;
+                            padding-top: 100px;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                            background-color: rgba(0, 0, 0, 0.8);
+                        }
+                
+                        .modal-content {
+                            margin: auto;
+                            display: block;
+                            max-width: 80%;
+                            max-height: 80%;
+                            border-radius: 5px;
+                        }
+                
+                        
+                
+                        .close:focus {
+                            color: #999;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                
+                        #caption {
+                            text-align: center;
+                            color: #ccc;
+                            padding: 10px;
+                        }
+                                    /* ปุ่มปิดภายใน Modal */
+                        .btn-close-modal {
+                            position: absolute;
+                            bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
+                            left: 50%; /* จัดตำแหน่งกลาง */
+                            transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
+                            background-color: #f1f1f1;
+                            border: none;
+                            padding: 10px 20px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .btn-close-modal:hover {
+                            background-color: #6f6d6d;
+                            color: white;
+                        }
+
+                    </style>
+
+                    <div class="topnav">
+                        <a onclick="filterSelection('all')">All</a>
+                        <a onclick="filterSelection('auto')">Automation</a>
+                        <a onclick="filterSelection('design')">Design The Whole System</a>
+                        <a onclick="filterSelection('conveyor')">Conveyor System</a>
+                        <a onclick="filterSelection('custom')">Custom-made machines</a>
+                        <a onclick="filterSelection('Electrical')">Electrical & PLC Program</a>
+                        <a onclick="filterSelection('standard')">Standard Parts & Accessories</a>
+                    </div>
+                    
+                    <div class="container1">
+                        <div class="filterDiv auto">
+                            <img src="a1.jpg">
+                        </div>
+                        <div class="filterDiv design">
+                            <img src="a2.jpg">
+                        </div>
+                        <div class="filterDiv conveyor">
+                            <img src="a3.jpg">
+                        </div>
+                        <div class="filterDiv custom">
+                            <img src="a4.jpg">
+                        </div>
+                        <div class="filterDiv Electrical">
+                            <img src="c1.jpg">
+                        </div>
+                        <div class="filterDiv standard">
+                            <img src="c2.jpg">
+                        </div>
+                        <div class="filterDiv standard">
+                            <img src="c3.jpg">
+                        </div>
+                        <div class="filterDiv Electrical">
+                            <img src="c4.jpg">
+                        </div>
+                        <div class="filterDiv conveyor">
+                            <img src="cm1.jpg">
+                        </div>
+                        <div class="filterDiv auto">
+                            <img src="cm2.jpg">
+                        </div>
+                        <div class="filterDiv design">
+                            <img src="cm1.jpg">
+                        </div>
+                        <div class="filterDiv design">
+                            <img src="cm4.JPG">
+                        </div>
+                        <div class="filterDiv auto">
+                            <img src="cm5.jpg">
+                        </div>
+                    </div>
+
+            <div id="myModal" class="modal">
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+                <!-- ปุ่มปิดภายใน modal -->
+                <button class="btn-close-modal">Close</button>
+            </div>
+        
+            <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("filterDiv");
+                    if (c == "all") c = "";
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                }
+                
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                    }
+                }
+        
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);     
                         }
                     }
-
-                    /* สไตล์สำหรับเมื่อใช้แท็บเล็ตหรือจอใหญ่ */
-                    @media screen and (min-width: 768px) {
-                        .topnav {
-                            justify-content: space-between;
-                        }
-                    }
-
-
-                    .filter-buttons {
-                        display: flex;
-                        justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
-                        flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
-                        gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
-                        margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
-                    }
-            
-                    
-            
-                    /* กล่องแสดงผลภาพ */
-                    .filterDiv {
-                        background-color: rgb(52, 52, 52);
-                        color: #ffffff;
-                        width: 100%;
-                        border-radius: 8px;
-                        display: none;
-                        justify-content: center;
-                        align-items: center;
-                        transition: all 0.3s ease;
-                    }
-            
-                    /* แสดงกล่องเมื่อมีการกรอง */
-                    .show {
-                        display: block;
-                    }
-            
-                    .filterDiv img {
-                        width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
-                        height: 300px; /* กำหนดความสูงที่คงที่ */
-                        object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
-                        border-radius: 5px; /* ขอบโค้ง */
-                        margin-bottom: 5px; /* ช่องว่างด้านล่าง */
-                    }
-                    
-                    .container1 {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-                        gap: 15px;
-                    }
-
-                    .modal {
-                        display: none;
-                        position: fixed;
-                        z-index: 1;
-                        padding-top: 100px;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        overflow: auto;
-                        background-color: rgba(0, 0, 0, 0.8);
-                    }
-            
-                    .modal-content {
-                        margin: auto;
-                        display: block;
-                        max-width: 80%;
-                        max-height: 80%;
-                        border-radius: 5px;
-                    }
-            
-                    
-            
-                    .close:focus {
-                        color: #999;
-                        text-decoration: none;
-                        cursor: pointer;
-                    }
-            
-                    #caption {
-                        text-align: center;
-                        color: #ccc;
-                        padding: 10px;
-                    }
-                                /* ปุ่มปิดภายใน Modal */
-                    .btn-close-modal {
-                        position: absolute;
-                        bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
-                        left: 50%; /* จัดตำแหน่งกลาง */
-                        transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
-                        background-color: #f1f1f1;
-                        border: none;
-                        padding: 10px 20px;
-                        cursor: pointer;
-                        border-radius: 5px;
-                        font-size: 16px;
-                        transition: background-color 0.3s ease;
-                    }
-
-                    .btn-close-modal:hover {
-                        background-color: #6f6d6d;
-                        color: white;
-                    }
-
-                </style>
-
-                <div class="topnav">
-                    <a onclick="filterSelection('all')">All</a>
-                    <a onclick="filterSelection('auto')">Automation</a>
-                    <a onclick="filterSelection('design')">Design The Whole System</a>
-                    <a onclick="filterSelection('conveyor')">Conveyor System</a>
-                    <a onclick="filterSelection('custom')">Custom-made machines</a>
-                    <a onclick="filterSelection('Electrical')">Electrical & PLC Program</a>
-                    <a onclick="filterSelection('standard')">Standard Parts & Accessories</a>
-                </div>
-
-            <div class="container1">
-                    <div class="filterDiv auto">
-                        <img src="a1.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="a2.jpg">
-                    </div>
-                    <div class="filterDiv conveyor">
-                        <img src="a3.jpg">
-                    </div>
-                    <div class="filterDiv custom">
-                        <img src="a4.jpg">
-                    </div>
-                    <div class="filterDiv Electrical">
-                        <img src="c1.jpg">
-                    </div>
-                    <div class="filterDiv standard">
-                        <img src="c2.jpg">
-                    </div>
-                    <div class="filterDiv standard">
-                        <img src="c3.jpg">
-                    </div>
-                    <div class="filterDiv Electrical">
-                        <img src="c4.jpg">
-                    </div>
-                    <div class="filterDiv conveyor">
-                        <img src="c5.jpg">
-                    </div>
-                    <div class="filterDiv auto">
-                        <img src="cm1.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="cm2.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="cm3.JPG">
-                    </div>
-                    <div class="filterDiv auto">
-                        <img src="cm4.jpg">
-                    </div>
-                </div>
-
-        <div id="myModal" class="modal">
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-            <!-- ปุ่มปิดภายใน modal -->
-            <button class="btn-close-modal">Close</button>
-        </div>
-    
-        <script>
-            filterSelection("all")
-            function filterSelection(c) {
-                var x, i;
-                x = document.getElementsByClassName("filterDiv");
-                if (c == "all") c = "";
-                for (i = 0; i < x.length; i++) {
-                    w3RemoveClass(x[i], "show");
-                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    element.className = arr1.join(" ");
                 }
-            }
-            
-            function w3AddClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-                }
-            }
-    
-            function w3RemoveClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    while (arr1.indexOf(arr2[i]) > -1) {
-                        arr1.splice(arr1.indexOf(arr2[i]), 1);     
-                    }
-                }
-                element.className = arr1.join(" ");
-            }
-    
-            // การเปิด modal เมื่อคลิกที่ภาพ
-                var modal = document.getElementById("myModal");
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption");
+        
+                // การเปิด modal เมื่อคลิกที่ภาพ
+                    var modal = document.getElementById("myModal");
+                    var modalImg = document.getElementById("img01");
+                    var captionText = document.getElementById("caption");
 
-                var images = document.querySelectorAll(".filterDiv img");
+                    var images = document.querySelectorAll(".filterDiv img");
 
-                images.forEach(function(img) {
-                img.onclick = function() {
-                    modal.style.display = "block"; // เปิด modal
-                    modalImg.src = this.src; // กำหนดแหล่งที่มาของภาพใน modal
-                    captionText.innerHTML = this.alt; // ถ้ามีคำบรรยายใต้ภาพ (ใช้ alt)
-                };
-                });
+                    images.forEach(function(img) {
+                    img.onclick = function() {
+                        modal.style.display = "block"; // เปิด modal
+                        modalImg.src = this.src; // กำหนดแหล่งที่มาของภาพใน modal
+                        captionText.innerHTML = this.alt; // ถ้ามีคำบรรยายใต้ภาพ (ใช้ alt)
+                    };
+                    });
 
-                // การปิด modal เมื่อคลิกที่ปุ่ม "X" หรือปุ่ม "Close"
-                var closeButton = document.getElementsByClassName("btn-close-modal")[0]; // ปุ่ม "Close"
+                    // การปิด modal เมื่อคลิกที่ปุ่ม "X" หรือปุ่ม "Close"
+                    var closeButton = document.getElementsByClassName("btn-close-modal")[0]; // ปุ่ม "Close"
 
-                // ปิด modal เมื่อคลิกที่ปุ่ม "Close"
-                closeButton.onclick = function() {
-                modal.style.display = "none";
-                };
-        </script>
+                    // ปิด modal เมื่อคลิกที่ปุ่ม "Close"
+                    closeButton.onclick = function() {
+                    modal.style.display = "none";
+                    };
+            </script>
 
-
-               
-        </div>
+            </div>
+    </div>
 
 <!--------------->
-        <!--- ส่วนเคดิต --->
+
+<!--- ส่วนเคดิต --->
+
         <div>
             <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
                 <div class="container d-flex justify-content-between align-items-center">
@@ -496,7 +502,7 @@
                 </div>
             </div>
         </div>
-        <!--------------->
+<!--------------->
 
 
 </body>
