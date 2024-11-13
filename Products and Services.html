@@ -17,15 +17,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-              
+    <style>   
     .navbar {
     overflow: hidden;
     background-color: #ffffff;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 11; 
+    z-index: 1; 
   }
   
   /* Style the navigation bar links */
@@ -137,10 +136,11 @@
 </head>
 <body>
 <!--- ส่วนหัว --->
-        <div> 
-            <div class="header">
-                <div id="header1" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+
+    <div> 
+        <div class="header">
+            <div id="header1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src="1.jpg" class="d-block w-100" alt="...">
                     </div>
@@ -150,59 +150,61 @@
                     <div class="carousel-item" data-bs-interval="7000">
                         <img src="3.jpg" class="d-block w-100" alt="...">
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="navbar" >
-            <div class="w3-bar w3-padding-16" id="myNavbar" >
-            <!-- Hamburger Icon for Small Screens -->
+    </div>
+    <div class="navbar" >
+        <div class="w3-bar w3-padding-16" id="myNavbar" >
+        <!-- Hamburger Icon for Small Screens -->
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
-            <!-- Logo Section -->
-            <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index.html">
+        <!-- Logo Section -->
+            <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
                 <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
             </a>
-            <!-- Menu Items -->
-            <a href="index.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">เกี่ยวกับเรา</a>
-            <a href="Products and Services.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">สินค้าและบริการ</a>
-            <a href="index.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">ติดต่อเรา</a>
-            <!-- Language Icons -->
-                <div class="w3-right" style="padding: 20px 10px;">
-                    <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                        <img src="th_th.gif" alt="ไทย" style="height: 25px;">
-                    </a>
-                    <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                        <img src="en_gb.gif" alt="English" style="height: 25px;">
-                    </a>
-                </div>
-                <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                    <a href="index.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">เกี่ยวกับเรา</a>
-                    <a href="Products and Services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">สินค้าและบริการ</a>
-                    <a href="index.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">ติดต่อเรา</a>
-                    <a href="index.html" class="w3-bar-item w3-button">
-                        <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+        <!-- Menu Items -->
+                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">เกี่ยวกับเรา</a>
+                <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">สินค้าและบริการ</a>
+                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">ติดต่อเรา</a>
+                    <!-- Language Icons -->
+                        <div class="w3-right" style="padding: 20px 10px;">
+                            <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                            </a>
+                            <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                <img src="en_gb.gif" alt="English" style="height: 25px;">
+                            </a>
+                        </div>
+                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                            <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">เกี่ยวกับเรา</a>
+                            <a href="Products and Services eng.html" class="w3-bar-item w3-button" onclick="toggleFunction()">สินค้าและบริการ</a>
+                            <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">ติดต่อเรา</a>
+                            <a href="index.html" class="w3-bar-item w3-button">
+                                <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
                     </a>
                     <a href="index eng.html" class="w3-bar-item w3-button" >
-                        <img src="en_gb.gif" alt="English" style="height: 25px;">
+                            <img src="en_gb.gif" alt="English" style="height: 25px;">
                     </a>
-                </div>
-            
+                    </div>
+        
         </div>
-        </div>
+    </div>
+<!------------->
+
 
 
   
 
 <!--- สินค้าและบริการ --->
 
-     <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
+    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
         
             
             <div class="text-center mb-4" >
                 <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white">
-                    Products and Services
+                    สินค้าของเรา
                 </a>
             </div>
 
@@ -367,7 +369,7 @@
 
                     <div class="topnav">
                         <a onclick="filterSelection('all')">ทั้งหมด</a>
-                        <a onclick="filterSelection('auto')">ระบบออโตเมชั่น</a>
+                         <a onclick="filterSelection('auto')">ระบบออโตเมชั่น</a>
                         <a onclick="filterSelection('design')">ออกแบบทั้งระบบ</a>
                         <a onclick="filterSelection('conveyor')">ระบบลำเลียง</a>
                         <a onclick="filterSelection('custom')">เครื่องจักรสั่งผลิตเฉพาะงาน</a>
@@ -484,13 +486,10 @@
             </div>
     </div>
 
-
-  
-
-  
 <!--------------->
 
 <!--- ส่วนเคดิต --->
+
         <div>
             <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
                 <div class="container d-flex justify-content-between align-items-center">
