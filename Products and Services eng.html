@@ -299,277 +299,51 @@
                 </a>
             </div>
 
-            <div class="row">
-                <style>
-                    /* ทำให้ปุ่มอยู่กลาง */
-                    .filter-buttons {
-                    display: flex;
-                    justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
-                    flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
-                    gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
-                    margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
-                }
-        
-                /* ปรับแต่งสไตล์ของปุ่ม */
-                .btn {
-                    border: none;
-                    outline: none;
-                    padding: 12px 20px;
-                    background-color: #f1f1f1;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    text-align: center;
-                    transition: background-color 0.3s ease;
-                }
-        
-                /* เปลี่ยนสีเมื่อ hover */
-                .btn:hover {
-                    background-color: #6f6d6d;
-                }
-        
-                /* กล่องแสดงผลภาพ */
-                .filterDiv {
-                    background-color: rgb(52, 52, 52);
-                    color: #ffffff;
-                    width: 100%;
-                    border-radius: 8px;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    transition: all 0.3s ease;
-                }
-        
-                /* แสดงกล่องเมื่อมีการกรอง */
-                .show {
-                    display: block;
-                }
-        
-                .filterDiv img {
-                    width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
-                    height: 300px; /* กำหนดความสูงที่คงที่ */
-                    object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
-                    border-radius: 5px; /* ขอบโค้ง */
-                    margin-bottom: 5px; /* ช่องว่างด้านล่าง */
-                }
-
-        
-                /* ตั้งค่าผลลัพธ์ให้จัดเรียงเป็นกริด */
-                .container1 {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-                    gap: 15px;
-                }
-        
-                /* ตั้งค่าการแสดงผลบนมือถือ */
-                @media (max-width: 768px) {
-                    .container {
-                        grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์สำหรับแท็บเล็ต */
-                    }
-                }
-        
-                @media (max-width: 480px) {
-                    .container {
-                        grid-template-columns: 1fr; /* 1 คอลัมน์สำหรับมือถือ */
-                    }
-        
-                    .filter-buttons {
-                        flex-direction: column; /* จัดปุ่มในแนวตั้ง */
-                    }
-        
-                    .btn {
-                        width: 100%; /* ปรับให้ปุ่มเต็มความกว้าง */
-                    }
-                }
-                
-                /* Modal */
-                .modal {
-                    display: none;
-                    position: fixed;
-                    z-index: 1;
-                    padding-top: 100px;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: auto;
-                    background-color: rgba(0, 0, 0, 0.8);
-                }
-        
-                .modal-content {
-                    margin: auto;
-                    display: block;
-                    max-width: 80%;
-                    max-height: 80%;
-                    border-radius: 5px;
-                }
-        
-                
-        
-                .close:focus {
-                    color: #999;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-        
-                #caption {
-                    text-align: center;
-                    color: #ccc;
-                    padding: 10px;
-                }
-                            /* ปุ่มปิดภายใน Modal */
-                .btn-close-modal {
-                    position: absolute;
-                    bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
-                    left: 50%; /* จัดตำแหน่งกลาง */
-                    transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
-                    background-color: #f1f1f1;
-                    border: none;
-                    padding: 10px 20px;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    transition: background-color 0.3s ease;
-                }
-
-                .btn-close-modal:hover {
-                    background-color: #6f6d6d;
-                    color: white;
-                }
-                </style>
-
-               
-                
-                <div class="filter-buttons">
-                     <ul class="nav justify-content-center">
-                  <li class="nav-item">
-                    <a class="nav-link active" onclick="filterSelection('all')">Show All</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('auto')">Automation</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('design')">Design The Whole System</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('conveyor')">Conveyor System</a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('custom')">Custom-made machines</a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('Electrical')">Electrical & PLC Program</a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="filterSelection('standard')">Standard Parts & Accessories</a>
-                  </li>
-                </ul>
-                </div>
-            
-                <div class="container1">
-                    <div class="filterDiv auto">
-                        <img src="a1.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="a2.jpg">
-                    </div>
-                    <div class="filterDiv conveyor">
-                        <img src="a3.jpg">
-                    </div>
-                    <div class="filterDiv custom">
-                        <img src="a4.jpg">
-                    </div>
-                    <div class="filterDiv Electrical">
-                        <img src="d1.jpg">
-                    </div>
-                    <div class="filterDiv standard">
-                        <img src="d2.jpg">
-                    </div>
-                    <div class="filterDiv standard">
-                        <img src="e1.jpg">
-                    </div>
-                    <div class="filterDiv Electrical">
-                        <img src="e4.jpg">
-                    </div>
-                    <div class="filterDiv conveyor">
-                        <img src="a1.jpg">
-                    </div>
-                    <div class="filterDiv auto">
-                        <img src="a2.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="a3.jpg">
-                    </div>
-                    <div class="filterDiv design">
-                        <img src="a4.JPG">
-                    </div>
-                    <div class="filterDiv auto">
-                        <img src="d2.jpg">
-                    </div>
-                </div>
-            
-                <div id="myModal" class="modal">
-                    <img class="modal-content" id="img01">
-                    <div id="caption"></div>
-                    <!-- ปุ่มปิดภายใน modal -->
-                    <button class="btn-close-modal">Close</button>
-                </div>
-            
-                <script>
-                    filterSelection("all")
-                    function filterSelection(c) {
-                        var x, i;
-                        x = document.getElementsByClassName("filterDiv");
-                        if (c == "all") c = "";
-                        for (i = 0; i < x.length; i++) {
-                            w3RemoveClass(x[i], "show");
-                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            <div>
+                        <style>
+    
+                        .topnav {
+                          overflow: hidden;
                         }
-                    }
-                    
-                    function w3AddClass(element, name) {
-                        var i, arr1, arr2;
-                        arr1 = element.className.split(" ");
-                        arr2 = name.split(" ");
-                        for (i = 0; i < arr2.length; i++) {
-                            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                        
+                        .topnav a {
+                          float: right;
+                          display: block;
+                          color: rgb(255, 255, 255);
+                          text-align: center;
+                          padding: 14px 16px;
+                          text-decoration: none;
+                          font-size: 14px;
+                          border-bottom: 3px solid transparent;
                         }
-                    }
-            
-                    function w3RemoveClass(element, name) {
-                        var i, arr1, arr2;
-                        arr1 = element.className.split(" ");
-                        arr2 = name.split(" ");
-                        for (i = 0; i < arr2.length; i++) {
-                            while (arr1.indexOf(arr2[i]) > -1) {
-                                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                         /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+                        @media screen and (max-width: 700px) {
+                            .row {   
+                            flex-direction: column;
                             }
                         }
-                        element.className = arr1.join(" ");
-                    }
-            
-                    // การเปิด modal เมื่อคลิกที่ภาพ
-                        var modal = document.getElementById("myModal");
-                        var modalImg = document.getElementById("img01");
-                        var captionText = document.getElementById("caption");
+                        
+                        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+                        @media screen and (max-width: 400px) {
+                            .navbar a {
+                            float: none;
+                            width: 100%;
+                            }
+                        }
+                        
+                        </style>
 
-                        var images = document.querySelectorAll(".filterDiv img");
-
-                        images.forEach(function(img) {
-                        img.onclick = function() {
-                            modal.style.display = "block"; // เปิด modal
-                            modalImg.src = this.src; // กำหนดแหล่งที่มาของภาพใน modal
-                            captionText.innerHTML = this.alt; // ถ้ามีคำบรรยายใต้ภาพ (ใช้ alt)
-                        };
-                        });
-
-                        // การปิด modal เมื่อคลิกที่ปุ่ม "X" หรือปุ่ม "Close"
-                        var closeButton = document.getElementsByClassName("btn-close-modal")[0]; // ปุ่ม "Close"
-
-                        // ปิด modal เมื่อคลิกที่ปุ่ม "Close"
-                        closeButton.onclick = function() {
-                        modal.style.display = "none";
-                        };
-                </script>
+                        
+                        <div class="topnav">
+                            <a href="#home">Home</a>
+                            <a href="#news">News</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#about">About</a>
+                            <a href="#support">Support</a>
+                            <a href="#blog">Blog</a>
+                        </div>
+                        
+                </div>
 
 <!--------------->
         <!--- ส่วนเคดิต --->
