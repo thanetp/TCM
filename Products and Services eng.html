@@ -300,47 +300,68 @@
             </div>
 
            <div>
-                    <style>
-                
-                        /* เมนูหลัก */
-                        .topnav {
-                            background-color: #333;
-                            overflow: hidden;
-                            display: flex;
-                            justify-content: flex-end; /* ให้เมนูอยู่ทางขวา */
-                            padding: 5px;
-                        }
-                
-                        .topnav a {
-                            text-align: center;
-                            padding: 14px 20px;
-                            text-decoration: none;
-                            font-size: 14px;
-                            border-bottom: 3px solid transparent;
-                            transition: background-color 0.3s, border-color 0.3s;
-                        }
-                
-                        /* เมื่อ hover เมนู */
-                        .topnav a:hover {
-                            color: black;
-                        }
-                
-                         /* สไตล์สำหรับโทรศัพท์ (Mobile) */
-                        @media screen and (max-width: 768px) {
-                            .topnav {
-                                justify-content: center;
-                            }
-                
-                            .topnav a {
-                                text-align: left;
-                                padding: 5px;
-                                font-size: 8px;
-                            }
-                        }
-                
+                      <style>
+        /* เมนูหลัก */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end; /* ให้เมนูอยู่ทางขวา */
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาใต้เมนู */
+            border-radius: 8px; /* มุมมน */
+        }
 
-                
-                    </style>
+        .topnav a {
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            border-bottom: 3px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+            font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
+            text-transform: uppercase; /* ข้อความตัวพิมพ์ใหญ่ */
+            letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+        }
+
+        /* เมื่อ hover เมนู */
+        .topnav a:hover {
+            background-color: #575757; /* เปลี่ยนพื้นหลังเมื่อ hover */
+            border-color: #f1f1f1; /* เปลี่ยนขอบล่าง */
+            transform: translateY(-2px); /* เพิ่มเอฟเฟกต์ยกเมนูขึ้นเมื่อ hover */
+        }
+
+        /* เมนูเมื่อคลิก */
+        .topnav a:active {
+            background-color: #444;
+            transform: translateY(0); /* เมื่อคลิกจะไม่ยกขึ้น */
+        }
+
+        /* สไตล์สำหรับโทรศัพท์ (Mobile) */
+        @media screen and (max-width: 768px) {
+            .topnav {
+                justify-content: center;
+                flex-wrap: wrap; /* เมนูจะขยับลงมาเมื่อจอเล็ก */
+            }
+
+            .topnav a {
+                text-align: left;
+                padding: 8px 15px;
+                font-size: 12px;
+                width: 100%; /* ทำให้เมนูเต็มความกว้างหน้าจอ */
+                border-bottom: 1px solid #444;
+            }
+        }
+
+        /* สไตล์สำหรับเมื่อใช้แท็บเล็ตหรือจอใหญ่ */
+        @media screen and (min-width: 768px) {
+            .topnav {
+                justify-content: space-between;
+            }
+        }
+
+    </style>
 
                         <div class="topnav">
                             <a href="#home">All</a>
