@@ -133,6 +133,13 @@
               x.className = x.className.replace(" w3-show", "");
           }
       }
+      function changeLanguage(language) {
+    if(language === 'th') {
+        window.location.href = 'index.html'; // เปลี่ยน URL ไปที่หน้าไทย
+    } else if(language === 'en') {
+        window.location.href = 'index eng.html'; // เปลี่ยน URL ไปที่หน้าอังกฤษ
+    }
+}
     </script>
 </head>
 <body>
