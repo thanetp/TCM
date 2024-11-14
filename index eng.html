@@ -124,15 +124,6 @@
                 }
             }
             
-            // Used to toggle the menu on small screens when clicking on the menu button
-            function toggleFunction() {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
         </script>
 </head>
 <body>
@@ -169,12 +160,12 @@
                         <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
                         <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
                         <!-- Language Icons -->
-                           <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red" onclick="changeLanguage('th')">
-                                <img src="img/icon/th_th.gif" alt="ไทย" style="height: 25px;">
-                            </a>
-                            <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red" onclick="changeLanguage('en')">
-                                <img src="img/icon/en_gb.gif" alt="English" style="height: 25px;">
-                            </a>
+                           <a href="index.html" class="w3-bar-item w3-button">
+                                    <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                                </a>
+                                <a href="index eng.html" class="w3-bar-item w3-button" >
+                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                </a>
                             </div>
                             <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
                                 <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
