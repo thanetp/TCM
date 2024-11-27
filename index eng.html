@@ -17,125 +17,132 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>   
-    .navbar {
-    overflow: hidden;
-    background-color: #ffffff;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 1; 
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    float: left;
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  
-  /* Right-aligned link */
-  .navbar a.right {
-    float: right;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Active/current link */
-  .navbar a.active {
-    background-color: #666;
-    color: white;
-  }
-  
+    <style>
+                    
+          .navbar {
+          overflow: hidden;
+          background-color: #ffffff;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+          z-index: 10; 
+        }
+        
+        /* Style the navigation bar links */
+        .navbar a {
+          float: left;
+          display: block;
+          color: rgb(0, 0, 0);
+          text-align: center;
+          text-decoration: none;
+        }
+        
+        
+        /* Right-aligned link */
+        .navbar a.right {
+          float: right;
+        }
+        
+        /* Change color on hover */
+        .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        /* Active/current link */
+        .navbar a.active {
+          background-color: #666;
+          color: white;
+        }
+        
 
-  
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-    -ms-flex: 30%; /* IE10 */
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 5px;
-  }
-  
-  /* Main column */
-  .main {   
-    -ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-  }
-  
-  /* Fake image, just for this example */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ffffff;
-  }
-  
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-    .row {   
-      flex-direction: column;
-    }
-  }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
-    }
-  }
-    </style>
-    <script>
-      
-      // Modal Image Gallery
-      function onClick(element) {
-        document.getElementById("img").src = element.src;
-        document.getElementById("modal").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-      }
-      
-      // Change style of navbar on scroll
-      window.onscroll = function() {myFunction()};
-      function myFunction() {
-          var navbar = document.getElementById("myNavbar");
-          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-              navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-          } else {
-              navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+          -ms-flex: 30%; /* IE10 */
+          flex: 30%;
+          background-color: #f1f1f1;
+          padding: 5px;
+        }
+        
+        /* Main column */
+        .main {   
+          -ms-flex: 70%; /* IE10 */
+          flex: 70%;
+          background-color: white;
+          padding: 20px;
+        }
+        
+        /* Fake image, just for this example */
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ffffff;
+        }
+        
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+          .row {   
+            flex-direction: column;
           }
-      }
-      
-      // Used to toggle the menu on small screens when clicking on the menu button
-      function toggleFunction() {
-          var x = document.getElementById("navDemo");
-          if (x.className.indexOf("w3-show") == -1) {
-              x.className += " w3-show";
-          } else {
-              x.className = x.className.replace(" w3-show", "");
+        }
+        
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+          .navbar a {
+            float: none;
+            width: 100%;
+          }
+        }
+          </style>
+          <script>
+            
+            // Modal Image Gallery
+            function onClick(element) {
+              document.getElementById("img").src = element.src;
+              document.getElementById("modal").style.display = "block";
+              var captionText = document.getElementById("caption");
+              captionText.innerHTML = element.alt;
+            }
+            
+            // Change style of navbar on scroll
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var navbar = document.getElementById("myNavbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                }
+            }
+            
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function toggleFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function changeLanguage(language) {
+          if(language === 'th') {
+              window.location.href = 'index.html'; // เปลี่ยน URL ไปที่หน้าไทย
+          } else if(language === 'en') {
+              window.location.href = 'index eng.html'; // เปลี่ยน URL ไปที่หน้าอังกฤษ
           }
       }
     </script>
 </head>
 <body>
-<!--- ส่วนหัว --->
 
     <div> 
         <div class="header">
@@ -154,380 +161,508 @@
             </div>
         </div>
     </div>
+
     <div class="navbar" >
         <div class="w3-bar w3-padding-16" id="myNavbar" >
-        <!-- Hamburger Icon for Small Screens -->
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-        <!-- Logo Section -->
-            <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
-                <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
-            </a>
-        <!-- Menu Items -->
-                <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
-                <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
-                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
-                    <!-- Language Icons -->
-                        <div class="w3-right" style="padding: 20px 10px;">
-                            <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                <img src="th_th.gif" alt="ไทย" style="height: 25px;">
-                            </a>
-                            <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
-                                <img src="en_gb.gif" alt="English" style="height: 25px;">
-                            </a>
-                        </div>
-                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                            <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
-                            <a href="Products and Services eng.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
-                            <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
-                            <a href="index.html" class="w3-bar-item w3-button">
-                                <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
-                    </a>
-                    <a href="index eng.html" class="w3-bar-item w3-button" >
-                            <img src="en_gb.gif" alt="English" style="height: 25px;">
-                    </a>
-                    </div>
-        
+                <!-- Hamburger Icon for Small Screens -->
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" style="font-size: 25px;" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- Logo Section -->
+                <a class="w3-bar-item w3-button w3-padding-0" style="height: 80px;" href="index eng.html">
+                    <img  src="tcm_logo.png" alt="Logo" style="height:100%; max-height: 75px;">
+                </a>
+                <!-- Menu Items -->
+                        <a href="index eng.html#item-1-1" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">About Us</a>
+                        <a href="Products and Services eng.html" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Products and Services</a>
+                        <a href="index eng.html#item-1-2" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-black" style="font-size: 20px; padding: 20px 16px;">Contact Us</a>
+                        <!-- Language Icons -->
+                            <div class="w3-right" style="padding: 20px 10px;">
+                                <a href="index.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                    <img src="th_th.gif" alt="ไทย" style="height: 25px;">
+                                </a>
+                                <a href="index eng.html" class="w3-button w3-hide-small w3-hover-none w3-hover-text-red">
+                                    <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                </a>
+                            </div>
+                                <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                                    <a href="index eng.html#item-1-1" class="w3-bar-item w3-button" onclick="toggleFunction()">About Us</a>
+                                    <a href="Products and Services eng.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products and Services</a>
+                                    <a href="index eng.html#item-1-2" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact Us</a>
+                                    <a href="index.html" class="w3-bar-item w3-button">
+                                        <img src="th_th.gif" alt="ภาษาไทย" style="height: 25px;">
+                                    </a>
+                                    <a href="index eng.html" class="w3-bar-item w3-button" >
+                                        <img src="en_gb.gif" alt="English" style="height: 25px;">
+                                    </a>
+                                </div>
+            
         </div>
     </div>
-<!------------->
-        
-                <!--- เกี่ยวกับเรา --->
-                <div>
-                    <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
-                    
-                        <div class="text-center mb-4">
-                            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
-                                About Us
-                            </a>
-                        </div>
-            
-                        <div class="row">
-                                <div class="col-md-6 mb-4" >
-                                    <div class="video-responsive">
-                                    <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                                <style>
-                                    .video-responsive {
-                                        position: relative;
-                                        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                                        height: 0;
-                                        overflow: hidden;
-                                    }
-                                    .video-responsive iframe {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        width: 100%; /* แก้ไขเป็น 100% */
-                                        height: 100%;
-                                    }
-                                </style>
-                                </div>
-                
-                                <!-- Content Section -->
-                                <div class="col-md-6" style="font-size: 14px;">
-                                <p class="mb-3">
-                                    Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry. Our Manufacturing Solutions offer automated production system designs (Automation & Robotics) for factories equipped with control and communication systems that align with the Industry 4.0 concept.
-                                </p>
-                    
-                                <p class="mb-3">
-                                    Our services include conveyor systems, automation systems, electrical control systems and PLCs, factory structures and cranes, automatic robotic arms, and upgrading existing machinery using modern technologies. Our team consists of more than 40 skilled engineers and craftsmen with extensive experience. We continuously develop and improve production processes to meet customer needs.
-                                </p>
-                    
-                                <p class="mb-3">
-                                    Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems. We provide consulting services in research, development, design, and construction of machinery for the manufacturing sector, with a clearly defined scope of work that includes research and development, design, production, assembly, installation, testing, and training.
-                                </p>
-                    
-                                <p class="mb-3">
-                                    The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
-                                </p>
-                    
-                                <ul class="mb-3">
-                                    <li>
-                                        <strong>In the production process:</strong>
-                                        We utilize automation technology to enhance precision and
-                                        minimize errors, including hazard detection sensor systems to improve production
-                                        safety
-                                    </li>
-                                    <li>
-                                        <strong>Energy Cost Reduction:</strong>
-                                        Our emphasis is on efficient energy use, offering alternative
-                                        energy solutions that reduce costs while preserving the environment.
-                                    </li>
-                                    <li>
-                                        <strong>Development and Innovation:</strong>
-                                        We invest in innovation and support the development
-                                        of new technologies that can lower costs, as well as developing new products that
-                                        meet market demands and add value for customers.
-                                    </li>
-                                    <li>
-                                        <strong>Environmental Responsibility:</strong>
-                                        We are committed to waste reduction and recycling by
-                                        developing production processes that minimize waste generation and promote the
-                                        use of recyclable materials. We also prioritize sustainable raw materials to reduce
-                                        environmental impact and greenhouse gas emissions, utilizing clean energy
-                                        technologies in our production.
-                                    </li>
-                                </ul>
-                    
-                                <p class="mb-3">
-                                    With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible. Our commitment to excellence, efficiency, and sustainability positions us to lead the way in developing solutions that benefit both industry and the environment, ensuring a better future for all.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-        <!---------------->
 
+    <div>
+        <div class=" text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px; ">
         
-
-        <!--- ติดต่อเรา --->
-        <div>
-            <div class=" text-center py-3" style="background-color: rgb(52, 52, 52);">
-                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-2">
-                    Contact us
+            <div class="text-center mb-4">
+                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                    About Us
                 </a>
-                <div class="col py-3" style="background-color: rgb(52, 52, 52);">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.99745219148!2d100.58567207845888!3d13.657918652493462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a1af673a5ded%3A0xefcd2ebe5a4c66b2!2sThai%20Central%20Mechanics%20Co.%2C%20Ltd!5e0!3m2!1sth!2sth!4v1726049640474!5m2!1sth!2sth" 
-                        width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div>
-                    <div class="contact-info-card p-5 mb-10" style="background-color: rgb(52, 52, 52); border: none; box-shadow: none;">
-                        <img src="tcm_logo1.gif" alt="TCM Logo" class="img-fluid mb-3">
-                        <h4 class="text-white">Thai Central Mechanics Co., Ltd.</h4>
-                        <p class="text-white">
-                            เลขที่ 1 หมู่ 10 ซ.วัดมหาวงษ์ ถ.ปู่เจ้าสมิงพราย ต.สำโรง อ.พระประแดง จ.สมุทรปราการ 10130
-                        </p>
-                        <p class="text-white">
-                            1 Moo 10 Soi Watmahawong, Poochaosamingprai Rd., T.Samrong, A.Phrapradaeng, Samutprakarn 10130 Thailand.
-                        </p>
-                        <p class="text-white">
-                        Telephone (Tel.): +66 2748-5313-5 <br> Fax: +66 2399-0365
-                        </p>  
+            </div>
+
+            <div class="row">
+                    <div class="col-md-6 mb-4" >
+                        <div class="video-responsive">
+                        <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="row-1 align-items-start">
-                        <div class="col">
-                            <a href="https://www.facebook.com/MachineryTCM">
-                                <img alt="" src="facebook.png" class="icon-img1">
-                                <p class="cus text-white">
-                                    facebook
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="https://www.youtube.com/@TCM.1989">
-                                <img alt=""src="youtube.png" class="icon-img1">
-                                <p class="cus text-white">
-                                    YouTube
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a>
-                                <img src="mail.png"  alt="Mail Icon" class="icon-img1" onclick="document.getElementById('id01').style.display='block'">                        
-                                <p class="cus text-white">
-                                    Mail
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a>
-                                <img src="phone.png" alt="Phone Icon" class="icon-img1">  
-                                <p class="cus text-white">
-                                    +66 2748-5313-5
-                                </p>                  
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a>
-                                <img src="fax-machine.png" alt="Fax Machine Icon" class="icon-img1">      
-                                <p class="cus text-white">
-                                    +66 2399-0365
-                                </p>                    
-                            </a>
-                        </div>
+                    <style>
+                        .video-responsive {
+                            position: relative;
+                            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                            height: 0;
+                            overflow: hidden;
+                        }
+                        .video-responsive iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%; /* แก้ไขเป็น 100% */
+                            height: 100%;
+                        }
+                    </style>
                     </div>
+    
+                    <!-- Content Section -->
+                    <div class="col-md-6" style="font-size: 14px;">
+                    <p class="mb-3">
+                        Thai Central Mechanics Co., Ltd. (TCM1989) was established in 1989 and specializes in providing industrial solutions, focusing on the design, research and development, construction, and installation of prototype machinery for the manufacturing industry. Our Manufacturing Solutions offer automated production system designs (Automation & Robotics) for factories equipped with control and communication systems that align with the Industry 4.0 concept.
+                    </p>
+        
+                    <p class="mb-3">
+                        Our services include conveyor systems, automation systems, electrical control systems and PLCs, factory structures and cranes, automatic robotic arms, and upgrading existing machinery using modern technologies. Our team consists of more than 40 skilled engineers and craftsmen with extensive experience. We continuously develop and improve production processes to meet customer needs.
+                    </p>
+        
+                    <p class="mb-3">
+                        Our customer base spans various industries, including electrical appliances, automotive and parts, construction materials, food and pharmaceuticals, and logistics. Thai Central Mechanics is a leader in conveyor systems, manufacturing machinery, and automation systems. We provide consulting services in research, development, design, and construction of machinery for the manufacturing sector, with a clearly defined scope of work that includes research and development, design, production, assembly, installation, testing, and training.
+                    </p>
+        
+                    <p class="mb-3">
+                        The goal of Thai Central Mechanics Co., Ltd. is to research and develop industrial machinery to help reduce costs for our customers, focusing on enhancing efficiency and sustainability in production processes through various approaches, including:
+                    </p>
+        
+                    <ul class="mb-3">
+                        <li>
+                            <strong>In the production process:</strong>
+                            We utilize automation technology to enhance precision and
+                            minimize errors, including hazard detection sensor systems to improve production
+                            safety
+                        </li>
+                        <li>
+                            <strong>Energy Cost Reduction:</strong>
+                            Our emphasis is on efficient energy use, offering alternative
+                            energy solutions that reduce costs while preserving the environment.
+                        </li>
+                        <li>
+                            <strong>Development and Innovation:</strong>
+                            We invest in innovation and support the development
+                            of new technologies that can lower costs, as well as developing new products that
+                            meet market demands and add value for customers.
+                        </li>
+                        <li>
+                            <strong>Environmental Responsibility:</strong>
+                            We are committed to waste reduction and recycling by
+                            developing production processes that minimize waste generation and promote the
+                            use of recyclable materials. We also prioritize sustainable raw materials to reduce
+                            environmental impact and greenhouse gas emissions, utilizing clean energy
+                            technologies in our production.
+                        </li>
+                    </ul>
+        
+                    <p class="mb-3">
+                        With these approaches, Thai Central Mechanics aims to be a leader in the machinery industry that is socially and environmentally responsible. Our commitment to excellence, efficiency, and sustainability positions us to lead the way in developing solutions that benefit both industry and the environment, ensuring a better future for all.
+                    </p>
                 </div>
-                <!-- เมล --> 
-                <div id="id01" class="modal">
-                    <div class="modal-content">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        
-                        <form class="email-form">
-                            <h5 class="modal-title" id="exampleModalLabelEmail">ส่งอีเมลถึงเรา</h5>
-                            <div class="form-group mb-3">
-                                <input type="text" name="name" id="name" class="form-control" placeholder="กรุณากรอกชื่อของคุณ" required />
-                            </div>
-                            <div class="form-group mb-3">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="กรุณากรอกอีเมลของคุณ" required />
-                            </div>
-                            <div class="form-group mb-3">
-                                <textarea name="message" id="message" class="form-control" rows="4" placeholder="พิมพ์ข้อความของคุณ" required></textarea>
-                            </div>
-                            <div class="form-actions text-center">
-                                <input type="button" value="Send" class="btn btn-primary" onclick="sendMail()" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
+            </div>
+        
+            <div>
                 <style>
-                     .row-1 {
-                        display: flex; /* Use flexbox */
-                        flex-direction: row; /* Arrange items in a row */
-                        justify-content: center; /* Center items horizontally, you can adjust as needed */
-                        align-items: center; /* Center items vertically, you can adjust as needed */
+                    /* The timeline container */
+                    .timeline {
+                        position: relative;
+                        max-width: 1300px;
+                        margin: 50px auto;
+                        overflow-x: auto;
+                        display: flex; /* Use flexbox for horizontal layout */
+                        padding-bottom: 10px; /* Ensure there's space at the bottom */
                     }
 
-                    .icon-img1 {
-                        max-width: 50px; /* ปรับขนาดไอคอน */
-                        height: auto; /* รักษาสัดส่วน */
-                    }
-
-                    .cus {
-                        margin-top: 10px; /* ปรับระยะห่างระหว่างไอคอนและข้อความ */
-                    }
-
-                    .text-center {
-                        text-align: center; /* จัดข้อความให้อยู่กลาง */
-                    }
-                    /* Modal background */
-                    .modal {
-                        display: none;
-                        position: fixed;
-                        z-index: 1;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        overflow: auto;
-                        background-color: rgba(0,0,0,0.4);
-                        transition: opacity 0.3s ease;
-                    }
-                
-                    /* Modal content */
-                    .modal-content {
-                        background-color: #fff;
-                        margin: 15% auto;
-                        padding: 20px;
-                        border-radius: 10px;
-                        width: 80%;
-                        max-width: 600px;
-                        position: relative; /* Ensure the close button is positioned relative to this */
-                    }
-                
-                    /* Close button */
-                    .close {
-                        color: #000;
-                        float: right;
-                        font-size: 28px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        position: absolute;
-                        top: 15px;
-                        right: 20px;
-                    }
-                
-                    .close:hover,
-                    .close:focus {
-                        color: #f00;
-                        text-decoration: none;
-                        cursor: pointer;
-                    }
-                
-                    /* Form title */
-                    .modal-title {
-                        font-size: 1.5em;
-                        margin-bottom: 15px;
+                    /* Container around each event */
+                    .container1 {
+                        position: relative;
+                        width: 500px; /* Slightly larger width for each event container */
+                        background-color: #ffffff;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for each event */
+                        padding: 25px;
                         text-align: center;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+                        margin: 15px; /* Increased space between the events */
                     }
-                
-                    /* Form elements */
-                    .form-group {
+
+                    /* Hover effect for the event containers */
+                    .container1:hover {
+                        transform: translateY(-10px); /* Slight lift effect */
+                        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+                    }
+
+                    /* Styling for the left and right side arrows */
+                    .left::before, .right::before {
+                        content: " ";
+                        height: 0;
+                        position: absolute;
+                        top: 18px;
+                        width: 0;
+                        border: medium solid transparent;
+                        z-index: 1;
+                    }
+
+                    .left::before {
+                        right: 100%; /* Left side pointing arrow */
+                        border-width: 12px 12px 12px 0;
+                        border-color: transparent transparent transparent #fff;
+                    }
+
+                    .right::before {
+                        left: 100%; /* Right side pointing arrow */
+                        border-width: 12px 0 12px 12px;
+                        border-color: transparent #fff transparent transparent;
+                    }
+
+                    /* Content area inside each event */
+                    .content1 {
+                        padding: 25px;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    /* Add some color and style for the text */
+                    h2 {
+                        font-size: 1.6em;
+                        color: #333;
                         margin-bottom: 15px;
+                        font-weight: 600;
                     }
-                
-                    .form-control {
-                        width: 100%;
-                        padding: 10px;
-                        border: 1px solid #ddd;
-                        border-radius: 5px;
-                        box-sizing: border-box;
+
+                    p1 {
+                        font-size: 1.1em;
+                        color: #333;
+                        line-height: 1.6;
+                        margin-bottom: 10px;
                     }
-                
-                    .form-control:focus {
-                        border-color: #4CAF50;
-                        outline: none;
-                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-                    }
-                
-                    /* Button styling */
-                    .form-actions {
-                        margin-top: 20px;
-                    }
-                
-                    .form-actions input[type="button"] {
-                        background-color: #4CAF50;
-                        color: white;
-                        border: none;
-                        padding: 12px 30px;
-                        margin: 5px;
-                        cursor: pointer;
-                        border-radius: 25px;
-                        font-size: 16px;
-                        font-weight: bold;
-                        transition: background-color 0.3s, transform 0.2s;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    }
-                
-                    .form-actions input[type="button"]:hover {
-                        background-color: #45a049;
-                        transform: translateY(-3px);
-                    }
-                
-                    .form-actions input[type="button"]:active {
-                        background-color: #397d39;
-                        transform: translateY(0);
-                    }
-                </style>
-                
-                <script>
-                    const sendMail = () => {
-                        const name = document.getElementById('name').value;
-                        const email = document.getElementById('email').value;
-                        const message = document.getElementById('message').value;
-                
-                        if (name && email && message) {
-                            window.open(`https://mail.google.com/mail/u/0/?view=cm&ui=2&tf=0&fs=1&to=info@tcm1989.com&su=เมลล์จากคุณ${encodeURIComponent(name + ' ' + email)}&body=${encodeURIComponent(message)}`);
-                        } else {
-                            alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+
+
+                    /* Media queries for responsive design */
+                    @media screen and (max-width: 768px) {
+                        .timeline {
+                            flex-direction: column; /* Stack events vertically on smaller screens */
+                        }
+                        .container1 {
+                            width: 80%; /* Take more width for smaller screens */
+                            margin: 20px auto; /* Center the event containers */
                         }
                     }
-                </script>
-            </div>
-        </div>
-        <!--------------->
 
-        <!--- ส่วนเคดิต --->
-        <div>
-            <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
-                        © 2024 Your Company. All Rights Reserved.
-                    </span>
-                    <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
-                        Designed By Thanet.P
-                    </span>
+                    @media screen and (max-width: 600px) {
+                        /* Make all events full width on extra small screens */
+                        .container1 {
+                            width: 100%;
+                        }
+                    }
+                </style>
+                 <div class="text-center mb-4">
+                    <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-1">
+                        Award for Achievement
+                    </a>
+                </div>
+                <div class="timeline">
+                    <div class="container1 left">
+                        <div class="content1">
+                            <img src="2553.png" alt="2010" class="img-fluid mb-3">
+                            <h2>2010</h2>
+                            <p1>Winner of the National Outstanding SMEs Award, 2nd Edition, for the year 2009, in the Machinery and Equipment Business category by the Office of Small and Medium Enterprises Promotion.</p1>
+                        </div>
+                    </div>
+
+                    <div class="container1 right">
+                        <div class="content1">
+                            <img src="2554-1.png" alt="2011-1" class="img-fluid mb-3">
+                            <h2>2011</h2>
+                            <p1>Winner of the National Outstanding SMEs Award, 3rd Edition, for the year 2010, in the Machinery and Equipment Business category by the Office of Small and Medium Enterprises Promotion.</p1>
+                        </div>
+                    </div>
+
+                    <div class="container1 left">
+                        <div class="content1">
+                            <img src="2554-2.png" alt="2011-2" class="img-fluid mb-3">
+                            <h2>2011</h2>
+                            <p1>Special Award for Outstanding Small Enterprises, National Outstanding SMEs Award, 3rd Edition, for the year 2010, by the Office of Small and Medium Enterprises Promotion.</p1>
+                        </div>
+                    </div>
+
+                    <div class="container1 right">
+                        <div class="content1">
+                            <img src="2557.png" alt="2014" class="img-fluid mb-3">
+                            <h2>2014</h2>
+                            <p1>Bai Po Business Awards by Sasin - 10th Edition Awards Received in the Dimensions of: Customer Focus, Social Responsibility, Entrepreneurship.</p1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--------------->
 
+        
+    </div>
 
+    <div>
+        <div class=" text-center py-3" style="background-color: rgb(52, 52, 52);">
+            <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white" id="item-1-2">
+                Contact us
+            </a>
+            <div class="col py-3" style="background-color: rgb(52, 52, 52);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.99745219148!2d100.58567207845888!3d13.657918652493462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a1af673a5ded%3A0xefcd2ebe5a4c66b2!2sThai%20Central%20Mechanics%20Co.%2C%20Ltd!5e0!3m2!1sth!2sth!4v1726049640474!5m2!1sth!2sth" 
+                    width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div>
+                <div class="contact-info-card p-5 mb-10" style="background-color: rgb(52, 52, 52); border: none; box-shadow: none;">
+                    <img src="tcm_logo1.gif" alt="TCM Logo" class="img-fluid mb-3">
+                    <h4 class="text-white">Thai Central Mechanics Co., Ltd.</h4>
+                    <p class="text-white">
+                        เลขที่ 1 หมู่ 10 ซ.วัดมหาวงษ์ ถ.ปู่เจ้าสมิงพราย ต.สำโรง อ.พระประแดง จ.สมุทรปราการ 10130
+                    </p>
+                    <p class="text-white">
+                        1 Moo 10 Soi Watmahawong, Poochaosamingprai Rd., T.Samrong, A.Phrapradaeng, Samutprakarn 10130 Thailand.
+                    </p>
+                    <p class="text-white">
+                    Telephone (Tel.): +66 2748-5313-5 <br> Fax: +66 2399-0365
+                    </p>  
+                </div>
+            </div>
+            <div class="container">
+                <div class="row-1 align-items-start">
+                    <div class="col">
+                        <a href="https://www.facebook.com/MachineryTCM">
+                            <img alt="" src="facebook.png" class="icon-img1">
+                            <p class="cus text-white">
+                                facebook
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.youtube.com/@TCM.1989">
+                            <img alt=""src="youtube.png" class="icon-img1">
+                            <p class="cus text-white">
+                                YouTube
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="mail.png"  alt="Mail Icon" class="icon-img1" onclick="document.getElementById('id01').style.display='block'">                        
+                            <p class="cus text-white">
+                                Mail
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="phone.png" alt="Phone Icon" class="icon-img1">  
+                            <p class="cus text-white">
+                                +66 2748-5313-5
+                            </p>                  
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a>
+                            <img src="fax-machine.png" alt="Fax Machine Icon" class="icon-img1">      
+                            <p class="cus text-white">
+                                +66 2399-0365
+                            </p>                    
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- เมล --> 
+            <div id="id01" class="modal">
+                <div class="modal-content">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    
+                    <form class="email-form">
+                        <h5 class="modal-title" id="exampleModalLabelEmail">Email us</h5>
+                        <div class="form-group mb-3">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Please enter your name." required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Please enter your email." required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
+                        </div>
+                        <div class="form-actions text-center">
+                            <input type="button" value="Send" class="btn btn-primary" onclick="sendMail()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <style>
+                 .row-1 {
+                    display: flex; /* Use flexbox */
+                    flex-direction: row; /* Arrange items in a row */
+                    justify-content: center; /* Center items horizontally, you can adjust as needed */
+                    align-items: center; /* Center items vertically, you can adjust as needed */
+                }
+
+                .icon-img1 {
+                    max-width: 50px; /* ปรับขนาดไอคอน */
+                    height: auto; /* รักษาสัดส่วน */
+                }
+
+                .cus {
+                    margin-top: 10px; /* ปรับระยะห่างระหว่างไอคอนและข้อความ */
+                }
+
+                .text-center {
+                    text-align: center; /* จัดข้อความให้อยู่กลาง */
+                }
+                /* Modal background */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0,0,0,0.4);
+                    transition: opacity 0.3s ease;
+                }
+            
+                /* Modal content */
+                .modal-content {
+                    background-color: #fff;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 80%;
+                    max-width: 600px;
+                    position: relative; /* Ensure the close button is positioned relative to this */
+                }
+            
+                /* Close button */
+                .close {
+                    color: #000;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                }
+            
+                .close:hover,
+                .close:focus {
+                    color: #f00;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            
+                /* Form title */
+                .modal-title {
+                    font-size: 1.5em;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            
+                /* Form elements */
+                .form-group {
+                    margin-bottom: 15px;
+                }
+            
+                .form-control {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+            
+                .form-control:focus {
+                    border-color: #4CAF50;
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                }
+            
+                /* Button styling */
+                .form-actions {
+                    margin-top: 20px;
+                }
+            
+                .form-actions input[type="button"] {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 12px 30px;
+                    margin: 5px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    transition: background-color 0.3s, transform 0.2s;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+            
+                .form-actions input[type="button"]:hover {
+                    background-color: #45a049;
+                    transform: translateY(-3px);
+                }
+            
+                .form-actions input[type="button"]:active {
+                    background-color: #397d39;
+                    transform: translateY(0);
+                }
+            </style>
+            
+            <script>
+                const sendMail = () => {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+            
+                    if (name && email && message) {
+                        window.open(`https://mail.google.com/mail/u/0/?view=cm&ui=2&tf=0&fs=1&to=info@tcm1989.com&su=เมลล์จากคุณ${encodeURIComponent(name + ' ' + email)}&body=${encodeURIComponent(message)}`);
+                    } else {
+                        alert('Please fill out the information completely.');
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <div>
+        <div class="card-footer text-muted " style="background-color: rgb(218, 215, 215); padding: 5px 0;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <span class="sp-copyright" style="font-size: 14px; color: #6c757d;">
+                    © 2024 Your Company. All Rights Reserved.
+                </span>
+                <span class="sp-designer" style="font-size: 14px; color: #6c757d;">
+                    Designed By Thanet.P
+                </span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
