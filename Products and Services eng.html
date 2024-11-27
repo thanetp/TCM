@@ -199,291 +199,352 @@
 
 <!--- สินค้าและบริการ --->
 
-    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;" >
-        
-            
-            <div class="text-center mb-4" >
-                <a style="font-size: 40px; width: 100%;" class="text-white nav-link link-white">
-                    Products and Services
-                </a>
-            </div>
+    <div class="text-white" style="background-color: rgb(52, 52, 52); padding: 30px 15px;">
+        <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                    }
 
-            <div>
-                    <style>
-                        /* เมนูหลัก */
-                        .topnav {
-                            background-color: #333;
-                            overflow: hidden;
-                            display: flex;
-                            justify-content: flex-end; /* ให้เมนูอยู่ทางขวา */
-                            padding: 10px 20px;
-                            border-radius: 8px; /* มุมมน */
-                        }
+                    .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 20px;
+                    }
 
-                        .topnav a {
-                            text-align: center;
-                            padding: 14px 25px;
-                            text-decoration: none;
-                            font-size: 16px;
-                            color: white;
-                            border-bottom: 3px solid transparent;
-                            transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-                            font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
-                            text-transform: uppercase; /* ข้อความตัวพิมพ์ใหญ่ */
-                            letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-                        }
-
-                        /* เมื่อ hover เมนู */
-                        .topnav a:hover {
-                            background-color: #575757; /* เปลี่ยนพื้นหลังเมื่อ hover */
-                            border-color: #f1f1f1; /* เปลี่ยนขอบล่าง */
-                            transform: translateY(-2px); /* เพิ่มเอฟเฟกต์ยกเมนูขึ้นเมื่อ hover */
-                        }
-
-                        /* เมนูเมื่อคลิก */
-                        .topnav a:active {
-                            background-color: #444;
-                            transform: translateY(0); /* เมื่อคลิกจะไม่ยกขึ้น */
-                        }
-
-                        /* สไตล์สำหรับโทรศัพท์ (Mobile) */
-                        @media screen and (max-width: 768px) {
-                            .topnav {
-                                justify-content: center;
-                                flex-wrap: wrap; /* เมนูจะขยับลงมาเมื่อจอเล็ก */
-                            }
-
-                            .topnav a {
-                                text-align: left;
-                                padding: 8px 15px;
-                                font-size: 12px;
-                                width: 100%; /* ทำให้เมนูเต็มความกว้างหน้าจอ */
-                                border-bottom: 1px solid #444;
-                            }
-                        }
-
-                        /* สไตล์สำหรับเมื่อใช้แท็บเล็ตหรือจอใหญ่ */
-                        @media screen and (min-width: 768px) {
-                            .topnav {
-                                justify-content: space-between;
-                            }
-                        }
+                    .product-image {
+                        width: 100%;            /* Ensures the image stretches to fill the container */
+                        max-width: 600px;       /* Sets a maximum width of 600px for large screens */
+                        height: 400px;          /* Fixed height for all product images */
+                        object-fit: cover;      /* Ensures the aspect ratio is preserved, and the image fills the container */
+                        margin: 20px auto;      /* Centers the image and adds some space around it */
+                        display: block;         /* Ensures the image is displayed as a block element */
+                        border: 2px solid #ddd; /* Optional: Adds a border around the image */
+                    }
 
 
-                        .filter-buttons {
-                            display: flex;
-                            justify-content: center; /* จัดปุ่มให้อยู่กลางในแนวนอน */
-                            flex-wrap: wrap; /* ให้ปุ่มเปลี่ยนแถวเมื่อหน้าจอเล็ก */
-                            gap: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
-                            margin-bottom: 20px; /* ให้ช่องว่างด้านล่าง */
-                        }
-                
-                        
-                
-                        /* กล่องแสดงผลภาพ */
-                        .filterDiv {
-                            background-color: rgb(52, 52, 52);
-                            color: #ffffff;
-                            width: 100%;
-                            border-radius: 8px;
-                            display: none;
-                            justify-content: center;
-                            align-items: center;
-                            transition: all 0.3s ease;
-                        }
-                
-                        /* แสดงกล่องเมื่อมีการกรอง */
-                        .show {
-                            display: block;
-                        }
-                
-                        .filterDiv img {
-                            width: 100%;  /* กำหนดความกว้างเต็มกล่อง */
-                            height: 300px; /* กำหนดความสูงที่คงที่ */
-                            object-fit: cover; /* ปรับให้ภาพเต็มกล่อง โดยไม่บิดเบี้ยว */
-                            border-radius: 5px; /* ขอบโค้ง */
-                            margin-bottom: 5px; /* ช่องว่างด้านล่าง */
-                        }
+                    .thumbnail-gallery {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: 20px;
+                    }
 
-                        .container1 {
-                            display: grid;
-                            grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-                            gap: 15px;
-                        }
+                    .thumbnail-gallery img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border: 2px solid #ddd;
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+                    }
 
-                        .modal {
-                            display: none;
-                            position: fixed;
-                            z-index: 11;
-                            padding-top: 100px;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.8);
-                        }
-                
-                        .modal-content {
-                            margin: auto;
-                            display: block;
-                            max-width: 80%;
-                            max-height: 80%;
-                            border-radius: 5px;
-                        }
-                
-                        
-                
-                        .close:focus {
-                            color: #999;
-                            text-decoration: none;
-                            cursor: pointer;
-                        }
-                
-                        #caption {
-                            text-align: center;
-                            color: #ccc;
-                            padding: 10px;
-                        }
-                                    /* ปุ่มปิดภายใน Modal */
-                        .btn-close-modal {
-                            position: absolute;
-                            bottom: 20px; /* วางตำแหน่งปุ่มให้ห่างจากด้านล่างของ modal */
-                            left: 50%; /* จัดตำแหน่งกลาง */
-                            transform: translateX(-50%); /* จัดให้ปุ่มอยู่กลาง */
-                            background-color: #f1f1f1;
-                            border: none;
-                            padding: 10px 20px;
-                            cursor: pointer;
-                            border-radius: 5px;
-                            font-size: 16px;
-                            transition: background-color 0.3s ease;
-                        }
+                    .thumbnail-gallery img:hover {
+                        transform: scale(1.1);
+                    }
 
-                        .btn-close-modal:hover {
-                            background-color: #6f6d6d;
-                            color: white;
-                        }
+                    .topnav {
+                        background-color: #333;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 10px 20px;
+                        border-radius: 8px;
+                    }
 
-                    </style>
+                    .topnav a {
+                        text-align: center;
+                        padding: 14px 25px;
+                        text-decoration: none;
+                        font-size: 16px;
+                        color: white;
+                        border-bottom: 3px solid transparent;
+                        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+                        font-family: 'Arial', sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
 
-                    <div class="topnav">
-                        <a onclick="filterSelection('all')">All</a>
-                        <a onclick="filterSelection('auto')">Automation</a>
-                        <a onclick="filterSelection('design')">Design The Whole System</a>
-                        <a onclick="filterSelection('conveyor')">Conveyor System</a>
-                        <a onclick="filterSelection('custom')">Custom-made machines</a>
-                        <a onclick="filterSelection('Electrical')">Electrical & PLC Program</a>
-                        <a onclick="filterSelection('standard')">Standard Parts & Accessories</a>
-                    </div>
+                    .topnav a:hover {
+                        background-color: #575757;
+                        border-color: #f1f1f1;
+                        transform: translateY(-2px);
+                    }
+
+                    .topnav a:active {
+                        background-color: #444;
+                        transform: translateY(0);
+                    }
+
+                    .filter-buttons {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    .filterDiv {
+                        display: none;
+                    }
+
+                    .filterDiv.show {
+                        display: block;
+                    }
+                    /* สไตล์สำหรับโทรศัพท์ (Mobile) */
+                    @media screen and (max-width: 768px) {
+                                    .topnav {
+                                        justify-content: center;
+                                        flex-wrap: wrap; /* เมนูจะขยับลงมาเมื่อจอเล็ก */
+                                    }
+
+                                    .topnav a {
+                                        text-align: left;
+                                        padding: 8px 15px;
+                                        font-size: 12px;
+                                        width: 100%; /* ทำให้เมนูเต็มความกว้างหน้าจอ */
+                                        border-bottom: 1px solid #444;
+                                    }
+                                }
+
+                                /* สไตล์สำหรับเมื่อใช้แท็บเล็ตหรือจอใหญ่ */
+                                @media screen and (min-width: 768px) {
+                                    .topnav {
+                                        justify-content: space-between;
+                                    }
+                                }
+
+                    /* Flexbox for the filter container */
+                    .filter-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px; /* Space between items */
+
+                    }
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+
+
+                    .product-details {
+                        text-align: center;
+                        max-width: 600px;
+                    }
+
+                    .product-details h2 {
+                        font-size: 2rem;
+                        margin-bottom: 10px;
+                        color: #f1f1f1;
+                    }
+
+                    .product-details .description {
+                        font-size: 1rem;
+                        color: #f1f1f1;
+                        margin-bottom: 15px;
+                    }
+
+                    .product-details ul {
+                        list-style: none;
+                        padding-left: 0;
+                        margin-top: 10px;
+                    }
+
+                    .product-details ul li {
+                        font-size: 1rem;
+                        color: #f1f1f1;
+                        margin-bottom: 5px;
+                    }
+
+
+                    /* Each filterDiv will take 32% width for 3 items per row */
+                    .filterDiv {
+                        width: 32%;  
+                        box-sizing: border-box; /* Prevents padding from breaking the layout */
+                    }
                     
-                    <div class="container1">
-                        <div class="filterDiv auto">
-                            <img src="a1.jpg">
-                        </div>
-                        <div class="filterDiv design">
-                            <img src="a2.jpg">
-                        </div>
-                        <div class="filterDiv conveyor">
-                            <img src="a3.jpg">
-                        </div>
-                        <div class="filterDiv custom">
-                            <img src="a4.jpg">
-                        </div>
-                        <div class="filterDiv Electrical">
-                            <img src="c1.jpg">
-                        </div>
-                        <div class="filterDiv standard">
-                            <img src="c2.jpg">
-                        </div>
-                        <div class="filterDiv standard">
-                            <img src="c3.jpg">
-                        </div>
-                        <div class="filterDiv Electrical">
-                            <img src="c4.jpg">
-                        </div>
-                        <div class="filterDiv conveyor">
-                            <img src="d1.jpg">
-                        </div>
-                        <div class="filterDiv auto">
-                            <img src="d2.jpg">
-                        </div>
-                        <div class="filterDiv design">
-                            <img src="d3.jpg">
-                        </div>
-                        <div class="filterDiv design">
-                            <img src="d4.JPG">
-                        </div>
-                        <div class="filterDiv auto">
-                            <img src="h1.jpg">
-                        </div>
-                    </div>
 
-            <div id="myModal" class="modal">
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-                <!-- ปุ่มปิดภายใน modal -->
-                <button class="btn-close-modal">Close</button>
-            </div>
-        
-            <script>
-                filterSelection("all")
-                function filterSelection(c) {
-                    var x, i;
-                    x = document.getElementsByClassName("filterDiv");
-                    if (c == "all") c = "";
-                    for (i = 0; i < x.length; i++) {
-                        w3RemoveClass(x[i], "show");
-                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                    }
-                }
-                
-                function w3AddClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-                    }
-                }
-        
-                function w3RemoveClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    /* Ensure responsiveness for smaller screens */
+                    @media (max-width: 768px) {
+                        .filterDiv {
+                            width: 48%; /* 2 items per row for smaller screens */
                         }
                     }
-                    element.className = arr1.join(" ");
-                }
-        
-                // การเปิด modal เมื่อคลิกที่ภาพ
-                    var modal = document.getElementById("myModal");
-                    var modalImg = document.getElementById("img01");
-                    var captionText = document.getElementById("caption");
 
-                    var images = document.querySelectorAll(".filterDiv img");
+                    @media (max-width: 480px) {
+                        .filterDiv {
+                            width: 100%; /* 1 item per row for very small screens */
+                        }
+                    }
+        </style>
 
-                    images.forEach(function(img) {
-                    img.onclick = function() {
-                        modal.style.display = "block"; // เปิด modal
-                        modalImg.src = this.src; // กำหนดแหล่งที่มาของภาพใน modal
-                        captionText.innerHTML = this.alt; // ถ้ามีคำบรรยายใต้ภาพ (ใช้ alt)
-                    };
-                    });
+        <div class="topnav">
+            <a href="javascript:void(0);" onclick="filterSelection('all')">all</a>
+            <a href="javascript:void(0);" onclick="filterSelection('auto')">Automation</a>
+            <a href="javascript:void(0);" onclick="filterSelection('design')">Design the Whole System</a>
+            <a href="javascript:void(0);" onclick="filterSelection('conveyor')">Conveyor System</a>
+            <a href="javascript:void(0);" onclick="filterSelection('custom')">Custom-made machines</a>
+            <a href="javascript:void(0);" onclick="filterSelection('electrical')">Electrical & PLC Program</a>
+            <a href="javascript:void(0);" onclick="filterSelection('standard')">Standard Parts & Accessories</a>
+        </div>
 
-                    // การปิด modal เมื่อคลิกที่ปุ่ม "X" หรือปุ่ม "Close"
-                    var closeButton = document.getElementsByClassName("btn-close-modal")[0]; // ปุ่ม "Close"
-
-                    // ปิด modal เมื่อคลิกที่ปุ่ม "Close"
-                    closeButton.onclick = function() {
-                    modal.style.display = "none";
-                    };
-            </script>
-
+        <div class="filter-container">
+            <!-- auto -->
+            <div class="filterDiv auto">
+                <div class="container">
+                    <img id="mainImageAuto" class="a1.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="a1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'auto')">
+                        <img src="a2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'auto')">
+                        <img src="a3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'auto')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
             </div>
+    
+            <div class="filterDiv auto1">
+                <div class="container">
+                    <img id="mainImageAuto1" class="product-image" src="d2.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="d1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'auto1')">
+                        <img src="d2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'auto1')">
+                        <img src="d3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'auto1')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System1</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- design -->
+            <div class="filterDiv design">
+                <div class="container">
+                    <img id="mainImageDesign" class="product-image" src="c3.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="c1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'design')">
+                        <img src="c2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'design')">
+                        <img src="c3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'design')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System2</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- conveyor -->
+            <div class="filterDiv conveyor">
+                <div class="container">
+                    <img id="mainImageConveyor" class="product-image" src="h2.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="h1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'conveyor')">
+                        <img src="h2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'conveyor')">
+                        <img src="h3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'conveyor')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System3</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- custom -->
+            <div class="filterDiv custom">
+                <div class="container">
+                    <img id="mainImageCustom" class="product-image" src="s1.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="s2.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'custom')">
+                        <img src="s3.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'custom')">
+                        <img src="s4.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'custom')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System4</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- electrical -->
+            <div class="filterDiv electrical">
+                <div class="container">
+                    <img id="mainImageElectrical" class="a2.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="a1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'electrical')">
+                        <img src="a2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'electrical')">
+                        <img src="a3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'electrical')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System5</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- standard -->
+            <div class="filterDiv standard">
+                <div class="container">
+                    <img id="mainImageStandard" class="product-image" src="h2.jpg" alt="Product">
+                    <div class="thumbnail-gallery">
+                        <img src="h1.jpg" alt="Thumbnail 1" onclick="changeImage(this, 'standard')">
+                        <img src="h2.jpg" alt="Thumbnail 2" onclick="changeImage(this, 'standard')">
+                        <img src="h3.jpg" alt="Thumbnail 3" onclick="changeImage(this, 'standard')">
+                    </div>
+                    <div class="product-details">
+                            <h2>Automatic System6</h2>
+                            <p class="description">This is a high-quality automatic system for industrial use, providing efficiency and performance in every operation.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+        <script>
+            // Default filter to show all
+            filterSelection("all");
+    
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";  // If "All" is selected, show all categories
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show"); // Hide all categories
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); // Show the selected category
+                }
+            }
+    
+            function w3AddClass(element, name) {
+                var arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (var i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+    
+            function w3RemoveClass(element, name) {
+                var arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (var i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+    
+            // Function to change main image when a thumbnail is clicked
+            function changeImage(thumbnail, category) {
+                var mainImage = document.getElementById("mainImage" + category.charAt(0).toUpperCase() + category.slice(1));
+                mainImage.src = thumbnail.src;  // Change the main image source to the clicked thumbnail
+            }
+        </script>
+    
     </div>
 
 <!--------------->
