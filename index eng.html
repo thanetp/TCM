@@ -215,20 +215,98 @@
                         <iframe src="https://www.youtube.com/embed/8RU-GDfOwCU?autoplay=1&si=-AbI7WuprnvaoqR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <style>
-                        .video-responsive {
-                            position: relative;
-                            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                            height: 0;
-                            overflow: hidden;
-                        }
-                        .video-responsive iframe {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%; /* แก้ไขเป็น 100% */
-                            height: 100%;
-                        }
-                    </style>
+                                    .video-responsive {
+                                        position: relative;
+                                        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                                        height: 0;
+                                        overflow: hidden;
+                                    }
+                                    .video-responsive iframe {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%; /* แก้ไขเป็น 100% */
+                                        height: 100%;
+                                    }
+                                                                    /* ใช้ฟอนต์จาก Google Fonts */
+                                    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+                                    
+                                    /* ปรับพื้นฐานของตัวอักษร */
+                                    body {
+                                        font-family: 'Roboto', sans-serif;
+                                        color: #333; /* ใช้สีที่มีความคอนทราสต์สูง */
+                                    }
+
+                                    /* ปรับข้อความในหัวข้อ */
+                                    h1, h2, h3 {
+                                        font-family: 'Roboto', sans-serif;
+                                        font-weight: 700; /* ทำให้หัวข้อหนาขึ้น */
+                                        color: #F1C40F; /* ใช้สีที่สดใส */
+                                        margin-bottom: 20px;
+                                    }
+
+                                    /* ปรับข้อความในส่วนเนื้อหา */
+                                    p, p1 {
+                                        font-size: 1.1em; /* ขนาดตัวอักษรที่อ่านง่าย */
+                                        line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+                                        margin-bottom: 15px;
+                                        color: #ecf0f1; /* สีอ่อนทำให้ดูสบายตา */
+                                    }
+
+                                    /* ปรับข้อความลิงค์ */
+                                    a {
+                                        color: #FF6347; /* สีแดงสด */
+                                        text-decoration: none;
+                                        font-weight: 500;
+                                    }
+
+                                    a:hover {
+                                        text-decoration: underline; /* เพิ่มการเน้นเมื่อเมาส์ชี้ไป */
+                                    }
+
+                                    /* ปรับข้อความในปุ่มหรือลิงค์ */
+                                    .nav-link {
+                                        font-size: 1.2em;
+                                        font-weight: 600;
+                                        color: #fff;
+                                        text-transform: uppercase; /* ทำให้ข้อความตัวพิมพ์ใหญ่ */
+                                    }
+
+                                    /* สำหรับ timeline */
+                                    .container1 h2 {
+                                        font-size: 1.8em;
+                                        color: #2ecc71; /* สีเขียวเพื่อให้ดูสดใส */
+                                        font-weight: bold;
+                                    }
+
+                                    .container1 p1 {
+                                        font-size: 1.1em;
+                                        color: #7f8c8d;
+                                        font-style: italic; /* ทำให้ข้อความในปีต่าง ๆ ดูเป็นเอกลักษณ์ */
+                                    }
+
+                                    /* เพิ่มการเน้นให้กับข้อความเมื่อ hover */
+                                    .container1:hover .content1 h2 {
+                                        color: #e74c3c; /* สีแดงเมื่อ hover */
+                                    }
+
+                                    /* เพิ่มสไตล์สำหรับรายการ */
+                                    ul {
+                                        list-style-type: square;
+                                        padding-left: 20px;
+                                        color: #bdc3c7;
+                                    }
+
+                                    ul li {
+                                        font-size: 1em;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    ul li strong {
+                                        font-weight: 700;
+                                        color: #f39c12; /* สีทองให้คำสำคัญดูโดดเด่น */
+                                    }
+                                </style>
                     </div>
     
                     <!-- Content Section -->
